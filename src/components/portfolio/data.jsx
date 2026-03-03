@@ -1,6 +1,3 @@
-import React from "react";
-import OpenSeaBg from "../../assets/opensea.webp";
-
 const projectsData = [
   {
     name: "VisionCraft",
@@ -13,8 +10,8 @@ const projectsData = [
     result: `VisionCraft has delivered substantial impact, reducing UI prototyping time by up to 70%. Teams can iterate faster, minimize manual coding efforts, and produce higher-quality user experiences more efficiently. The combination of live preview for instant feedback, editable Figma components for seamless refinement, and customizable code output makes it a powerful tool for modern design and development workflows. Overall, it transforms the way interfaces are built—from vision to implementation—in a fraction of the traditional time.`,
     techStack: ["React", "TypeScript", "Figma Plugin API", "NLP Models"],
     impact: "Reduced UI prototyping time by up to 70%",
-    heroImage: OpenSeaBg,
-    logoUrl: OpenSeaBg,
+    heroImage: "/figma.png",
+    logoUrl: "/figma.png",
     overviewHeadline: "Transforming Ideas into Editable Figma Components",
     problemHeadline: "The Fragmented Handoff Between Design and Code",
     solutionHeadline: "Bridging the Gap with Natural Language UI Generation",
@@ -32,8 +29,8 @@ const projectsData = [
     result: `MailGenius delivers a measurable 50% increase in user productivity by significantly cutting down the time spent on email composition and management. Professionals save hours weekly on repetitive tasks, achieve more consistent and high-quality communication, and experience reduced mental load from writing. The seamless Outlook integration, contextual intelligence, and tone/professionalism controls make it a reliable companion for modern workflows, allowing users to prioritize strategic thinking and relationship-building over tedious email drafting. Overall, it transforms email from a productivity bottleneck into a streamlined, high-impact communication channel.`,
     techStack: ["Angular", "Microsoft Graph API", "Transformer Models"],
     impact: "Increased user productivity by 50%",
-    heroImage: OpenSeaBg,
-    logoUrl: OpenSeaBg,
+    heroImage: "/outlook.png",
+    logoUrl: "/outlook.png",
     overviewHeadline: "Elevating Professional Communication within Outlook",
     problemHeadline: "The Daily Drain of Email Management and Refinement",
     solutionHeadline:
@@ -43,23 +40,38 @@ const projectsData = [
   {
     name: "GradeWise",
     slug: "gradewise",
-    title: "GradeWise – AI Grading Assistant for Educators",
-    tagline: "Automated grading and personalized feedback",
-    overview: `GradeWise is an AI-powered web application built to revolutionize grading and feedback in education. It automates the assessment of assignments and exams, delivering fast, accurate, and personalized results to both educators and students. Leveraging custom-trained natural language processing (NLP) models alongside a robust tech stack (Django REST Framework, React, Redux), GradeWise handles both objective (e.g., multiple-choice, short-answer) and subjective (e.g., essays) responses. Key features include auto-assessment of objective and subjective answers, intelligent and personalized feedback generation, question-answering via interactive chatbot, and sentiment analysis to detect struggling students. GradeWise enables educators to save significant time, enhance feedback quality, increase student engagement, and adopt a more data-driven approach to teaching and learning.`,
-    problem: `Grading remains one of the most time-intensive and emotionally draining tasks for educators. Manually assessing large volumes of assignments and exams—especially subjective answers like essays—takes hours or days, leading to delayed feedback, teacher burnout, and inconsistent evaluation quality. Students often receive generic or late comments that fail to guide improvement effectively. Additionally, identifying students who are struggling emotionally or academically is difficult without deep analysis of their responses. These challenges limit scalability in larger classes, reduce student engagement due to slow or impersonal feedback, and hinder data-informed teaching decisions.`,
-    solution: `GradeWise provides a comprehensive, AI-driven platform that integrates directly into educators' workflows. Teachers upload assignments or exams, and the system automatically grades objective questions (multiple-choice, short-answer) with near-instant accuracy. For subjective responses like essays, custom-trained NLP models evaluate content, structure, and quality while generating detailed, constructive, and personalized feedback tailored to each student's performance. Beyond grading, GradeWise performs sentiment analysis on student submissions to flag at-risk individuals (e.g., signs of frustration, disengagement, or misunderstanding), allowing early intervention. An interactive Q&A chatbot offers students on-demand clarification and support, further boosting engagement and understanding. This creates an efficient end-to-end process: upload student work → AI auto-grades and generates feedback → sentiment insights highlight support needs → students access personalized comments and chatbot assistance → teachers review results and focus on high-value teaching activities.`,
-    result: `GradeWise dramatically reduces grading time by up to 80%, freeing educators to focus on instruction, mentoring, and curriculum development rather than repetitive assessment tasks. The platform delivers higher-quality, consistent, and timely feedback, significantly improving student engagement and learning outcomes. Sentiment analysis enables proactive support for struggling learners, while the interactive chatbot extends help beyond classroom hours. Overall, GradeWise empowers educational institutions to scale personalized education, foster data-driven decision-making, and create more effective, supportive learning environments for both teachers and students.`,
+    title: "GradeWise (Webapp) - AI-Empowered Grading Assistant for Education",
+    tagline: "Automated grading and feedback for educators.",
+    overview: `GradeWise is a transformative web application designed to empower educators with AI-driven grading and feedback. By automating the assessment of assignments and exams, GradeWise saves teachers countless hours and delivers personalized, actionable feedback to students. Its custom-trained AI models evaluate both objective and subjective answers, flag at-risk students, and provide insights that drive better learning outcomes. With GradeWise, educational institutions can scale their impact, improve engagement, and foster a data-driven approach to teaching and learning.
+
+Key Features
+- Auto-Assessment
+- Intelligent Feedback
+- Question-Answering
+- Sentiment Analysis
+
+Tech Stack & Impact
+- Tech Stack: Django REST, React, Redux, Custom NLP Models
+- Impact: Reduced grading time by 80%.`,
+    problem: `What is GradeWise?
+GradeWise is a web application designed for educators to automate grading and provide intelligent feedback on assignments and exams. It uses custom-trained AI models to assess both objective and subjective answers.`,
+    solution: `Core Features
+- Instant grading of multiple-choice and short-answer questions
+- Personalized feedback for essays
+- Sentiment analysis to flag at-risk students
+- Interactive Q&A chatbot for student support`,
+    result: `Why GradeWise?
+- Reduces grading workload for teachers
+- Improves feedback quality and student engagement
+- Supports data-driven education`,
     techStack: ["Django REST", "React", "Redux", "Custom NLP Models"],
     impact: "Reduced grading time by 80%",
-    heroImage: OpenSeaBg,
-    logoUrl: OpenSeaBg,
-    overviewHeadline:
-      "Modernizing Assessment for the Next Generation of Educators",
-    problemHeadline: "The Burden of Manual Grading and Delayed Feedback",
-    solutionHeadline:
-      "Automated Assessment with Personalized, Sentiment-Aware Insights",
-    resultHeadline:
-      "Scaling Personalized Education and Fostering Student Success",
+    heroImage: "/gradewise.png",
+    logoUrl: "/gradewise.png",
+    overviewHeadline: "AI-Empowered Grading Assistant for Education",
+    problemHeadline: "What is GradeWise?",
+    solutionHeadline: "Core Features",
+    resultHeadline: "Why GradeWise?",
   },
   {
     name: "Deep-fake Audio Generation",
@@ -72,8 +84,8 @@ const projectsData = [
     result: `Deep-fake Audio Generation achieves MOS scores exceeding 4.0 in blind listening tests, placing its output quality in the "very good" to "excellent" range—comparable to or surpassing many commercial TTS systems. The combination of LSTM modeling and SV2TTS vocoding delivers expressive, natural prosody and speaker identity preservation, making cloned voices highly convincing even from brief samples. The project enables powerful real-world applications: personalized voice assistants and chatbots, accessibility tools for individuals with speech or reading difficulties, high-quality voice generation for entertainment, audiobooks, dubbing, and media production. By pushing the boundaries of machine learning-based audio synthesis, Deep-fake Audio Generation provides researchers, developers, and creators with a flexible, high-fidelity platform that dramatically improves the realism and usability of synthetic speech.`,
     techStack: ["TensorFlow", "PyTorch", "Librosa"],
     impact: "MOS scores exceeding 4.0 in blind listening tests",
-    heroImage: OpenSeaBg,
-    logoUrl: OpenSeaBg,
+    heroImage: "/audio.png",
+    logoUrl: "/audio.png",
     overviewHeadline: "State-of-the-Art Neural Audio Synthesis",
     problemHeadline: "The Robotic and Unnatural Quality of Synthetic Speech",
     solutionHeadline: "High-Fidelity Waves and Seamless Voice Cloning",
@@ -95,8 +107,8 @@ const projectsData = [
       "Regression/Classification Models",
     ],
     impact: "Automated evaluation and real-time scoring for hiring",
-    heroImage: OpenSeaBg,
-    logoUrl: OpenSeaBg,
+    heroImage: "/hr.png",
+    logoUrl: "/hr.png",
     overviewHeadline: "Revolutionizing Recruitment with Real-Time Intelligence",
     problemHeadline: "The Inefficiency and Subjectivity of Traditional Hiring",
     solutionHeadline:
@@ -114,8 +126,8 @@ const projectsData = [
     result: `The platform delivers fully automated lead engagement combined with comprehensive campaign analytics, significantly increasing sales team efficiency and effectiveness. Sales professionals can handle 5–10× more outreach volume with minimal manual effort, while AI scoring ensures they focus on higher-quality, more responsive leads—leading to improved response rates, better conversation quality, and stronger pipeline velocity. Teams benefit from centralized control over outreach strategy, consistent messaging at scale, and data-driven optimization through real-time metrics. Overall, Personalized LinkedIn Sales Navigator Automation empowers businesses to turn LinkedIn into a predictable, high-ROI channel—delivering faster deal cycles, higher conversion rates, and measurable revenue growth with far less manual work.`,
     techStack: ["React", "Node.js", "ML Models"],
     impact: "Automated lead engagement and campaign analytics",
-    heroImage: OpenSeaBg,
-    logoUrl: OpenSeaBg,
+    heroImage: "/linkedin.png",
+    logoUrl: "/linkedin.png",
     overviewHeadline: "Maximizing Revenue Potential on LinkedIn",
     problemHeadline: "The Labor-Intensive Nature of B2B Lead Prospecting",
     solutionHeadline: "End-to-End Automated Discovery and Prioritization",

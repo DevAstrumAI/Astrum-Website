@@ -106,25 +106,25 @@ function ProjectDetail() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-left">
         <CaseSection
           label="Overview"
-          headline="AI-Powered Email Productivity for Outlook"
+          headline={project.overviewHeadline || "Project Overview"}
           content={project.overview}
         />
 
         <CaseSection
           label="The Problem"
-          headline="Time-Consuming & Inconsistent Email Communication"
+          headline={project.problemHeadline || "The Core Challenge"}
           content={project.problem}
         />
 
         <CaseSection
           label="The Solution"
-          headline="Intelligent Real-Time Email Assistance"
+          headline={project.solutionHeadline || "The Proposed Solution"}
           content={project.solution}
         />
 
         <CaseSection
           label="The Result"
-          headline="50% Productivity Boost & Polished Communication"
+          headline={project.resultHeadline || "Business Impact"}
           content={project.result}
         />
 
