@@ -27,7 +27,7 @@ const Fintech = () => {
     <div className="min-h-screen text-white bg-black">
 
       {/* ── Hero ── */}
-      <section className="relative pt-4 pb-16 px-6 sm:px-12 lg:px-16 overflow-hidden">
+      <section className="snap-section relative pt-4 pb-16 px-6 sm:px-12 lg:px-16 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
           style={{ backgroundImage: "linear-gradient(to right,#fff 1px,transparent 1px),linear-gradient(to bottom,#fff 1px,transparent 1px)", backgroundSize: "48px 48px" }} />
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
@@ -54,7 +54,7 @@ const Fintech = () => {
       </section>
 
       {/* ── Challenges ── */}
-      <section className="py-16 md:py-24 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-16 md:py-24 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="mb-12">
             <p className={SECTION_LABEL}>Challenges</p>
@@ -84,7 +84,7 @@ const Fintech = () => {
       </section>
 
       {/* ── Clients & Partners ── */}
-      <section className="py-16 md:py-20 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-16 md:py-20 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="mb-12">
             <p className={SECTION_LABEL}>Who We Serve</p>
@@ -108,7 +108,7 @@ const Fintech = () => {
       </section>
 
       {/* ── Solutions ── */}
-      <section className="py-16 md:py-24 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-16 md:py-24 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="mb-12">
             <p className={SECTION_LABEL}>Solutions</p>
@@ -133,7 +133,7 @@ const Fintech = () => {
       </section>
 
       {/* ── Technology Partners ── */}
-      <section className="py-16 md:py-20 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-16 md:py-20 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="mb-12">
             <p className={SECTION_LABEL}>Ecosystem</p>
@@ -151,7 +151,7 @@ const Fintech = () => {
       </section>
 
       {/* ── Why Choose ── */}
-      <section className="py-16 md:py-20 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-16 md:py-20 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp}
             className="rounded-2xl border border-white/10 overflow-hidden"
@@ -185,7 +185,9 @@ const Fintech = () => {
         </div>
       </section>
 
-      <ContactForm />
+      <section className="snap-section">
+        <ContactForm />
+      </section>
     </div>
   );
 };

@@ -143,16 +143,28 @@ export default function About() {
 
       {/* Content */}
       <div className="relative z-10">
-        <div className="pt-20">
+        <section className="snap-section pt-20">
           <ShapingTomorrow />
-        </div>
+        </section>
         <div className="space-y-0">
+          <section className="snap-section">
           <CeoMessage />
+          </section>
+          <section className="snap-section">
           <DeploymentScaling />
+          </section>
+          <section className="snap-section">
           <RightFit />
+          </section>
+          <section className="snap-section">
           <CoreValues />
+          </section>
+          <section className="snap-section">
           <MeetExperts />
+          </section>
+          <section className="snap-section">
           <ChooseAstrumai />
+          </section>
         </div>
       </div>
     </div>

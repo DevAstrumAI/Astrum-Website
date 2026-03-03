@@ -51,10 +51,12 @@ const ServiceBaseLayout = ({ serviceData, children }) => {
       </div>
 
       {/* Hero slot */}
-      {children}
+      <section className="snap-section">
+        {children}
+      </section>
 
       {/* ── What We Do ── */}
-      <section className="py-16 md:py-24 px-6 border-t border-white/[0.06]">
+      <section className="snap-section py-16 md:py-24 px-6 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="mb-10">
             <p className={SECTION_LABEL}>Capabilities</p>
@@ -82,7 +84,7 @@ const ServiceBaseLayout = ({ serviceData, children }) => {
       </section>
 
       {/* ── Let's Discuss ── */}
-      <section className="py-16 md:py-20 px-6 border-t border-white/[0.06]">
+      <section className="snap-section py-16 md:py-20 px-6 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <motion.div {...fadeUp}>
             <img src={letsDicussYourProject} alt="Lets Discuss Your Project"
@@ -105,7 +107,7 @@ const ServiceBaseLayout = ({ serviceData, children }) => {
       </section>
 
       {/* ── How We Do It ── */}
-      <section className="py-16 md:py-24 px-6 border-t border-white/[0.06]">
+      <section className="snap-section py-16 md:py-24 px-6 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="mb-10">
             <p className={SECTION_LABEL}>Process</p>
@@ -138,7 +140,7 @@ const ServiceBaseLayout = ({ serviceData, children }) => {
       </section>
 
       {/* ── Tech Stack Marquee ── */}
-      <section className="py-16 md:py-20 border-t border-white/[0.06] overflow-hidden">
+      <section className="snap-section py-16 md:py-20 border-t border-white/[0.06] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 mb-10">
           <motion.div {...fadeUp}>
             <p className={SECTION_LABEL}>Tech Stack</p>
@@ -188,7 +190,9 @@ const ServiceBaseLayout = ({ serviceData, children }) => {
         </div>
       </section>
 
-      <ContactFrom />
+      <section className="snap-section">
+        <ContactFrom />
+      </section>
     </div>
   );
 };

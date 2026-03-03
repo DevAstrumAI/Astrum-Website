@@ -20,7 +20,7 @@ const Retail = () => {
     <div className="min-h-screen bg-black text-white">
 
       {/* ── Hero ── */}
-      <section className="relative pt-4 pb-16 px-6 sm:px-12 lg:px-16 overflow-hidden">
+      <section className="snap-section relative pt-4 pb-16 px-6 sm:px-12 lg:px-16 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
           style={{ backgroundImage: "linear-gradient(to right,#fff 1px,transparent 1px),linear-gradient(to bottom,#fff 1px,transparent 1px)", backgroundSize: "48px 48px" }} />
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
@@ -47,7 +47,7 @@ const Retail = () => {
       </section>
 
       {/* ── Solutions 1 ── */}
-      <section className="py-16 md:py-24 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-16 md:py-24 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="mb-12">
             <p className={SECTION_LABEL}>Solutions</p>
@@ -77,7 +77,7 @@ const Retail = () => {
       </section>
 
       {/* ── Solutions 2 ── */}
-      <section className="py-16 md:py-24 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-16 md:py-24 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row-reverse items-start gap-10">
             <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -103,7 +103,7 @@ const Retail = () => {
       </section>
 
       {/* ── Why Choose ── */}
-      <section className="py-16 md:py-20 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-16 md:py-20 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp}
             className="rounded-2xl border border-white/10 overflow-hidden"
@@ -137,7 +137,9 @@ const Retail = () => {
         </div>
       </section>
 
-      <ContactForm />
+      <section className="snap-section">
+        <ContactForm />
+      </section>
     </div>
   );
 };

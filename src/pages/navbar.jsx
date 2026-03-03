@@ -38,6 +38,7 @@ const servicesData = {
 };
 
 const industriesData = [
+  { label: "All Industries", href: "/industries", description: "Explore all industry solutions.", icon: Home },
   { label: "Fintech", href: "/fintech", description: "Modern financial technology solutions.", icon: CreditCard },
   { label: "Retail", href: "/retail", description: "AI-driven commerce and retail tech.", icon: ShoppingBag },
   { label: "Healthtech", href: "/health-care", description: "Innovative healthcare and medical AI.", icon: Stethoscope },
@@ -146,22 +147,31 @@ const NavItem = ({ href, children }) => {
 };
 
 /* ─── Mobile Accordion ──────────────────────────────────────────────── */
-const MobileAccordion = ({ label, children }) => {
+const MobileAccordion = ({ label, to, children, onNavigate }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="border-b border-white/[0.06]">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between py-4 px-2 text-gray-300 hover:text-white transition-colors text-left"
-      >
-        <span style={{ fontFamily: "'Outfit', sans-serif" }} className="text-sm font-light tracking-wide">
+      <div className="relative w-full py-4 px-2 text-center">
+        <Link
+          to={to}
+          onClick={onNavigate}
+          style={{ fontFamily: "'Outfit', sans-serif" }}
+          className="inline-block text-sm font-light tracking-wide text-gray-300 hover:text-white transition-colors"
+        >
           {label}
-        </span>
-        <ChevronDown
-          className={`h-4 w-4 transition-transform duration-300 text-gray-600 ${isOpen ? "rotate-180 text-[#914FFC]" : ""}`}
-        />
-      </button>
+        </Link>
+        <button
+          type="button"
+          aria-label={`Toggle ${label} menu`}
+          onClick={() => setIsOpen(!isOpen)}
+          className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-gray-600 hover:text-[#914FFC] transition-colors"
+        >
+          <ChevronDown
+            className={`h-4 w-4 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#914FFC]" : ""}`}
+          />
+        </button>
+      </div>
 
       <AnimatePresence>
         {isOpen && (
@@ -172,7 +182,7 @@ const MobileAccordion = ({ label, children }) => {
             transition={{ duration: 0.25, ease: "easeOut" }}
             className="overflow-hidden"
           >
-            <div className="px-2 pb-5 pt-1 space-y-7">
+            <div className="px-2 pb-5 pt-1 space-y-6">
               {children}
             </div>
           </motion.div>
@@ -260,6 +270,7 @@ const Navbar = () => {
           </NavDropdown>
 
           <NavDropdown
+            to="/industries"
             label={<span style={{ fontFamily: "'Outfit', sans-serif" }} className="text-sm font-light">Industries</span>}
           >
             <div className="flex flex-col space-y-1 min-w-[260px] text-left">
@@ -332,7 +343,11 @@ const Navbar = () => {
               <MobileNavItem href="/" onClick={() => setIsMenuOpen(false)}>Home</MobileNavItem>
               <MobileNavItem href="/about" onClick={() => setIsMenuOpen(false)}>About</MobileNavItem>
 
-              <MobileAccordion label="Services">
+              <MobileAccordion
+                label="Services"
+                to="/services"
+                onNavigate={() => setIsMenuOpen(false)}
+              >
                 {Object.entries(servicesData).map(([category, items]) => (
                   <div key={category}>
                     <h3
@@ -359,7 +374,11 @@ const Navbar = () => {
                 ))}
               </MobileAccordion>
 
-              <MobileAccordion label="Industries">
+              <MobileAccordion
+                label="Industries"
+                to="/industries"
+                onNavigate={() => setIsMenuOpen(false)}
+              >
                 <div className="flex flex-col gap-1">
                   {industriesData.map((industry) => (
                     <Link

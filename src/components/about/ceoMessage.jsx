@@ -109,10 +109,13 @@ export default function CeoMessage() {
                 className="relative text-lg md:text-xl text-gray-300 font-light leading-[1.8] italic"
               >
                 <Quote className="absolute -top-4 -left-6 w-8 h-8 text-purple-500/15 rotate-180" />
-                "At AstrumAI, we believe that artificial intelligence should be
+                At AstrumAI, we believe that artificial intelligence should be
                 a force for good, empowering businesses to achieve what was once
                 thought impossible. Our mission is to democratize AI technology
-                and make it accessible to organizations of all sizes."
+                and make it accessible to organizations of all sizes.
+                <span className="inline-flex align-middle ml-2 -mb-1">
+                  <Quote className="w-7 h-7 text-purple-500/25" />
+                </span>
               </motion.blockquote>
 
               <motion.div

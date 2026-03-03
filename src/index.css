@@ -233,3 +233,26 @@ All colors MUST be HSL.
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 7rem;
+}
+
+.snap-scroll-root section,
+.snap-scroll-root .snap-section {
+  min-height: calc(100svh - 7rem);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 6rem;
+  }
+
+  .snap-scroll-root section,
+  .snap-scroll-root .snap-section {
+    min-height: calc(100svh - 6rem);
+  }
+}

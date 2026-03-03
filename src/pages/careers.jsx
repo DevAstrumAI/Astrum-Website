@@ -205,7 +205,7 @@ const Careers = () => {
     <div className="min-h-screen bg-black text-white">
 
       {/* ══ HERO ══ */}
-      <section className="relative pt-28 pb-10 md:pt-32 md:pb-14 px-6 sm:px-12 lg:px-16">
+      <section className="snap-section relative pt-28 pb-10 md:pt-32 md:pb-14 px-6 sm:px-12 lg:px-16">
         {/* subtle grid */}
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.025]"
@@ -351,12 +351,18 @@ const Careers = () => {
       </section>
 
       {/* ══ SECTIONS ══ */}
-      <Mission />
-      <CoreValues />
-      <OurBenefits />
-      <div id="open-positions">
+      <section className="snap-section">
+        <Mission />
+      </section>
+      <section className="snap-section">
+        <CoreValues />
+      </section>
+      <section className="snap-section">
+        <OurBenefits />
+      </section>
+      <section id="open-positions" className="snap-section">
         <Hiring />
-      </div>
+      </section>
     </div>
   );
 };

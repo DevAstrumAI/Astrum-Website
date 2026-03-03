@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Challenges from "../components/services/challenges";
@@ -49,13 +49,22 @@ const TileIcon = ({ id, color }) => {
 };
 
 /* ── Service tiles scattered around the canvas ── */
-const SERVICE_TILES = [
+const SERVICE_TILES_DESKTOP = [
   { label: "AI Automation",   iconId: "automation", top: "8%",  left: "5%",  delay: 0,   accent: "#914FFC" },
   { label: "ML Models",       iconId: "ml",         top: "6%",  left: "55%", delay: 0.5, accent: "#2B61E5" },
   { label: "NLP & LLMs",      iconId: "nlp",        top: "38%", left: "72%", delay: 0.9, accent: "#E93A8B" },
   { label: "Computer Vision", iconId: "vision",     top: "70%", left: "58%", delay: 0.3, accent: "#914FFC" },
   { label: "Data Analytics",  iconId: "analytics",  top: "74%", left: "10%", delay: 0.7, accent: "#2B61E5" },
   { label: "Cloud AI Deploy", iconId: "cloud",      top: "38%", left: "2%",  delay: 1.1, accent: "#E93A8B" },
+];
+
+const SERVICE_TILES_MOBILE = [
+  { label: "AI Automation",   iconId: "automation", top: "9%",  left: "4%",  delay: 0,   accent: "#914FFC" },
+  { label: "ML Models",       iconId: "ml",         top: "8%",  left: "48%", delay: 0.5, accent: "#2B61E5" },
+  { label: "NLP & LLMs",      iconId: "nlp",        top: "38%", left: "60%", delay: 0.9, accent: "#E93A8B" },
+  { label: "Computer Vision", iconId: "vision",     top: "70%", left: "50%", delay: 0.3, accent: "#914FFC" },
+  { label: "Data Analytics",  iconId: "analytics",  top: "76%", left: "8%",  delay: 0.7, accent: "#2B61E5" },
+  { label: "Cloud AI Deploy", iconId: "cloud",      top: "38%", left: "1%",  delay: 1.1, accent: "#E93A8B" },
 ];
 
 /* SVG connector endpoints (% of 500x500 box) */
@@ -73,8 +82,20 @@ const CONNECTORS = [
 ];
 
 function HeroVisual() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 640px)");
+    const apply = () => setIsMobile(mq.matches);
+    apply();
+    mq.addEventListener("change", apply);
+    return () => mq.removeEventListener("change", apply);
+  }, []);
+
+  const tiles = isMobile ? SERVICE_TILES_MOBILE : SERVICE_TILES_DESKTOP;
+
   return (
-    <div className="relative w-full" style={{ height: 520 }}>
+    <div className="relative w-full max-w-[560px] mx-auto" style={{ height: isMobile ? 420 : 520 }}>
 
       {/* deep ambient glow */}
       <motion.div
@@ -115,7 +136,7 @@ function HeroVisual() {
         transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}
         className="absolute z-10 flex flex-col items-center justify-center rounded-full"
         style={{
-          width: 110, height: 110,
+          width: isMobile ? 90 : 110, height: isMobile ? 90 : 110,
           top: "50%", left: "50%",
           translate: "-50% -50%",
           background: "radial-gradient(circle, rgba(145,79,252,0.55) 0%, rgba(43,97,229,0.3) 55%, rgba(0,0,0,0.1) 100%)",
@@ -126,7 +147,7 @@ function HeroVisual() {
         <motion.span
           animate={{ opacity: [0.6, 1, 0.6] }}
           transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-          className="text-2xl font-extralight bg-linear-to-r from-[#a78bfa] via-white to-[#f472b6] bg-clip-text text-transparent"
+          className={`${isMobile ? "text-xl" : "text-2xl"} font-extralight bg-linear-to-r from-[#a78bfa] via-white to-[#f472b6] bg-clip-text text-transparent`}
           style={{ fontFamily: "'Outfit', sans-serif" }}
         >
           AI
@@ -134,7 +155,7 @@ function HeroVisual() {
         <motion.span
           animate={{ opacity: [0.4, 0.85, 0.4], letterSpacing: ["0.12em", "0.2em", "0.12em"] }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          className="text-[9px] uppercase text-[#c4b5fd]"
+          className={`${isMobile ? "text-[8px]" : "text-[9px]"} uppercase text-[#c4b5fd]`}
           style={{ fontFamily: "'Outfit', sans-serif" }}
         >
           Services
@@ -147,7 +168,7 @@ function HeroVisual() {
         transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
         className="absolute rounded-full pointer-events-none"
         style={{
-          width: 200, height: 200,
+          width: isMobile ? 170 : 200, height: isMobile ? 170 : 200,
           top: "50%", left: "50%",
           translate: "-50% -50%",
           border: "1px solid rgba(145,79,252,0.35)",
@@ -156,7 +177,7 @@ function HeroVisual() {
       />
 
       {/* Floating service tiles */}
-      {SERVICE_TILES.map((tile, i) => (
+      {tiles.map((tile, i) => (
         <motion.div
           key={tile.label}
           initial={{ opacity: 0, scale: 0.7 }}
@@ -166,7 +187,7 @@ function HeroVisual() {
             scale: { duration: 0.6, delay: tile.delay },
             y: { duration: 3.5 + i * 0.3, repeat: Infinity, ease: "easeInOut", delay: tile.delay },
           }}
-          className="absolute z-20 flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl backdrop-blur-md pointer-events-none"
+          className={`absolute z-20 flex items-center ${isMobile ? "gap-2 px-2.5 py-2" : "gap-2.5 px-3.5 py-2.5"} rounded-xl backdrop-blur-md pointer-events-none`}
           style={{
             top: tile.top,
             left: tile.left,
@@ -174,7 +195,7 @@ function HeroVisual() {
             background: `linear-gradient(135deg, rgba(8,8,16,0.82), rgba(14,14,28,0.68))`,
             boxShadow: `0 0 18px ${tile.accent}28, inset 0 0 10px ${tile.accent}12`,
             fontFamily: "'Outfit', sans-serif",
-            minWidth: 148,
+            minWidth: isMobile ? 112 : 148,
           }}
         >
           <motion.div
@@ -184,7 +205,7 @@ function HeroVisual() {
           >
             <TileIcon id={tile.iconId} color={tile.accent} />
           </motion.div>
-          <span className="text-[12px] font-light text-gray-200 whitespace-nowrap">
+          <span className={`${isMobile ? "text-[11px]" : "text-[12px]"} font-light text-gray-200 whitespace-nowrap`}>
             {tile.label}
           </span>
           <motion.div
@@ -204,7 +225,7 @@ function HeroVisual() {
           transition={{ duration: 3.6, repeat: Infinity, ease: "easeOut", delay: i * 1.2 }}
           className="absolute rounded-full pointer-events-none"
           style={{
-            width: 110, height: 110,
+            width: isMobile ? 90 : 110, height: isMobile ? 90 : 110,
             top: "50%", left: "50%",
             translate: "-50% -50%",
             border: "1px solid rgba(145,79,252,0.5)",
@@ -220,7 +241,7 @@ const Services = () => {
     <div className="min-h-screen bg-black text-white overflow-hidden">
 
       {/* ══ HERO ══ */}
-      <section className="relative pt-20 pb-10 md:pt-24 md:pb-14 px-6 sm:px-12 lg:px-16 overflow-hidden">
+      <section className="snap-section relative pt-20 pb-10 md:pt-24 md:pb-14 px-6 sm:px-12 lg:px-16 overflow-hidden">
         {/* Background grid */}
         <div className="absolute inset-0 pointer-events-none opacity-[0.025]"
           style={{ backgroundImage: "linear-gradient(to right,#80808020 1px,transparent 1px),linear-gradient(to bottom,#80808020 1px,transparent 1px)", backgroundSize: "40px 40px" }} />
@@ -351,9 +372,15 @@ const Services = () => {
       </section>
 
       {/* ══ SECTIONS ══ */}
-      <Challenges />
-      <OurServices />
-      <ContactFrom />
+      <section className="snap-section">
+        <Challenges />
+      </section>
+      <section className="snap-section">
+        <OurServices />
+      </section>
+      <section className="snap-section">
+        <ContactFrom />
+      </section>
     </div>
   );
 };

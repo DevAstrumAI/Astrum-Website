@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Search, ChevronDown, MapPin, Briefcase, LineChart } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const departments = [
   {
@@ -203,8 +204,8 @@ export default function Hiring() {
                               </span>
                             </div>
                           </div>
-                          <a
-                            href={job.applyLink}
+                          <Link
+                            to={`/careers/apply-now?role=${encodeURIComponent(job.title)}&location=${encodeURIComponent(job.location)}`}
                             style={{ fontFamily:"'Outfit', sans-serif" }}
                             className="
                               inline-flex items-center gap-1.5 px-5 py-2
@@ -217,7 +218,7 @@ export default function Hiring() {
                             "
                           >
                             Apply Now →
-                          </a>
+                          </Link>
                         </div>
                       ))}
                     </div>

@@ -345,31 +345,26 @@ export default function Home() {
     const scrollPosition = e.target.scrollLeft;
     const width = e.target.offsetWidth;
     const newIndex = Math.round(scrollPosition / width);
-    if (newIndex !== activeCardIndex) {
-      setActiveCardIndex(newIndex);
-    }
+    if (newIndex !== activeCardIndex) setActiveCardIndex(newIndex);
   };
 
   const handleFeatureScroll = (e) => {
     const scrollPosition = e.target.scrollLeft;
     const width = e.target.offsetWidth;
     const newIndex = Math.round(scrollPosition / width);
-    if (newIndex !== activeFeatureIndex) {
-      setActiveFeatureIndex(newIndex);
-    }
+    if (newIndex !== activeFeatureIndex) setActiveFeatureIndex(newIndex);
   };
 
   return (
-    <div
-      className="min-h-screen bg-black text-white relative flex flex-col items-center 
-    justify-center pt-12 md:pt-20"
-    >
+    <div className="min-h-screen bg-black text-white relative flex flex-col items-center justify-center pt-12 md:pt-20">
       <NeuralNetworkBackground />
 
-      <Hero headings={headings} />
+      <section className="snap-section relative z-10 w-full">
+        <Hero headings={headings} />
+      </section>
 
       {/* Full-Stack AI Solutions Section */}
-      <section className="relative z-10 w-full bg-black py-12 md:py-15 px-5 sm:px-10 lg:px-16 border-t border-white/5 text-left">
+      <section className="snap-section relative z-10 w-full bg-black py-12 md:py-15 px-5 sm:px-10 lg:px-16 border-t border-white/5 text-left">
         <div className="max-w-8xl mx-auto">
           {/* Header */}
           <div className="text-center space-y-4 mb-16 md:mb-20">
@@ -377,7 +372,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.25 }}
               style={{ fontFamily: "'Outfit', sans-serif" }}
               className="text-3xl sm:text-4xl md:text-5xl font-extralight text-gray-100 tracking-[-0.02em]"
             >
@@ -391,7 +386,7 @@ export default function Home() {
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               transition={{ delay: 0.4, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.25 }}
               className="mx-auto h-px w-16 bg-linear-to-r from-transparent via-[#914FFC] to-transparent origin-center"
             />
 
@@ -399,7 +394,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.25 }}
               style={{ fontFamily: "'Outfit', sans-serif" }}
               className="text-gray-500 text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-light leading-[1.8]"
             >
@@ -422,7 +417,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.25 }}
               className="
               min-w-full lg:min-w-0 
               lg:w-full snap-start flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-16
@@ -470,7 +465,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.25 }}
               className="
               min-w-full lg:min-w-0 
               lg:w-full snap-start flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-16
@@ -517,7 +512,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.25 }}
               className="
               min-w-full lg:min-w-0 
               lg:w-full snap-start flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-16
@@ -573,7 +568,7 @@ export default function Home() {
       </section>
 
       {/* Agentic Solutions Section */}
-      <section className="relative z-10 w-full bg-black py-10 px-6 sm:px-12 lg:px-16 border-t border-white/5 text-left">
+      <section className="snap-section relative z-10 w-full bg-black py-10 px-6 sm:px-12 lg:px-16 border-t border-white/5 text-left">
         <div className="max-w-8xl mx-auto space-y-20">
           {/* Section Header */}
           <div className="text-center space-y-4">
@@ -581,7 +576,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.25 }}
               style={{ fontFamily: "'Outfit', sans-serif" }}
               className="text-3xl sm:text-4xl md:text-5xl font-extralight text-gray-100 tracking-[-0.02em]"
             >
@@ -594,14 +589,14 @@ export default function Home() {
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               transition={{ delay: 0.35, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.25 }}
               className="mx-auto h-px w-16 bg-linear-to-r from-transparent via-[#914FFC] to-transparent origin-center"
             />
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.25 }}
               style={{ fontFamily: "'Outfit', sans-serif" }}
               className="text-gray-500 text-sm md:text-base max-w-xl md:mx-auto font-light leading-[1.8]"
             >
@@ -621,7 +616,7 @@ export default function Home() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.25 }}
               className="group relative bg-white/10 rounded-4xl md:rounded-5xl overflow-hidden border border-white/5 min-h-[400px] shrink-0 w-full lg:w-full snap-start flex flex-col pt-4 pb-12"
             >
               <div className="p-12 space-y-8">
@@ -657,7 +652,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.25 }}
               className="group relative bg-white/10 rounded-4xl md:rounded-5xl overflow-hidden border border-white/5 h-auto min-h-[400px] shrink-0 w-full lg:w-full snap-start flex flex-col pt-4 pb-12"
             >
               <div className="p-12 space-y-8">
@@ -699,73 +694,74 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* AI Data Section */}
+      <section className="snap-section relative z-10 w-full bg-black py-15 px-6 sm:px-12 lg:px-16 border-t border-white/5">
+        <div className="max-w-8xl mx-auto text-center space-y-4">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: false, amount: 0.25 }}
+            style={{ fontFamily: "'Outfit', sans-serif" }}
+            className="text-3xl sm:text-4xl md:text-5xl font-extralight text-gray-100 leading-[1.2] tracking-[-0.02em] text-left md:text-center"
+          >
+            We Have Redefined the World of{" "}
+            <br className="hidden md:block" />
+            <span className="bg-linear-to-r from-[#2B61E5] via-[#7B59D0] to-[#E93A8B] bg-clip-text text-transparent">
+              AI Data
+            </span>
+          </motion.h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ delay: 0.35, duration: 0.7 }}
+            viewport={{ once: false, amount: 0.25 }}
+            className="mx-auto h-px w-16 bg-linear-to-r from-transparent via-[#914FFC] to-transparent origin-center hidden md:block"
+          />
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            viewport={{ once: false, amount: 0.25 }}
+            style={{ fontFamily: "'Outfit', sans-serif" }}
+            className="text-gray-500 text-sm md:text-base max-w-xl md:mx-auto font-light leading-[1.85] text-left md:text-center"
+          >
+            From intelligent data pipelines to enterprise-ready AI systems,
+            our approach reshapes how AI creates measurable business value —
+            built to perform in real-world environments.
+          </motion.p>
+        </div>
+      </section>
+
       {/* Customer Testimonials Section */}
-      <section className="relative z-10 w-full bg-black py-15 px-6 sm:px-12 lg:px-16 border-t border-white/5">
-        <div className="max-w-8xl mx-auto space-y-20">
-          {/* Section Header */}
-          <div className="text-center space-y-4">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-              style={{ fontFamily: "'Outfit', sans-serif" }}
-              className="text-3xl sm:text-4xl md:text-5xl font-extralight text-gray-100 leading-[1.2] tracking-[-0.02em] text-left md:text-center"
-            >
-              We Have Redefined the World of{" "}
-              <br className="hidden md:block" />
-              <span className="bg-linear-to-r from-[#2B61E5] via-[#7B59D0] to-[#E93A8B] bg-clip-text text-transparent">
-                AI Data
-              </span>
-            </motion.h2>
-            <motion.div
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              transition={{ delay: 0.35, duration: 0.7 }}
-              viewport={{ once: true }}
-              className="mx-auto h-px w-16 bg-linear-to-r from-transparent via-[#914FFC] to-transparent origin-center hidden md:block"
-            />
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              viewport={{ once: true }}
-              style={{ fontFamily: "'Outfit', sans-serif" }}
-              className="text-gray-500 text-sm md:text-base max-w-xl md:mx-auto font-light leading-[1.85] text-left md:text-center"
-            >
-              From intelligent data pipelines to enterprise-ready AI systems,
-              our approach reshapes how AI creates measurable business value —
-              built to perform in real-world environments.
-            </motion.p>
-          </div>
-          <div className="text-left md:text-center space-y-12">
-            <motion.h2
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              style={{ fontFamily: "'Outfit', sans-serif" }}
-              className="text-3xl md:text-4xl lg:text-5xl font-extralight text-gray-100 leading-[1.2] tracking-[-0.02em]"
-            >
-              What Our{" "}
-              <span className="bg-linear-to-r from-[#2B61E5] via-[#7B59D0] to-[#E93A8B] bg-clip-text text-transparent">
-                Clients
-              </span>{" "}
-              Say
-            </motion.h2>
-            <TestimonialCarousel />
-          </div>
+      <section className="snap-section relative z-10 w-full bg-black py-15 px-6 sm:px-12 lg:px-16 border-t border-white/5">
+        <div className="max-w-8xl mx-auto text-left md:text-center space-y-12">
+          <motion.h2
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false, amount: 0.25 }}
+            style={{ fontFamily: "'Outfit', sans-serif" }}
+            className="text-3xl md:text-4xl lg:text-5xl font-extralight text-gray-100 leading-[1.2] tracking-[-0.02em]"
+          >
+            What Our{" "}
+            <span className="bg-linear-to-r from-[#2B61E5] via-[#7B59D0] to-[#E93A8B] bg-clip-text text-transparent">
+              Clients
+            </span>{" "}
+            Say
+          </motion.h2>
+          <TestimonialCarousel />
         </div>
       </section>
 
       {/* Final CTA Section */}
-      <section className="relative z-10 w-full bg-black py-10 pt-10 pb-20 px-4 sm:px-12 lg:px-16">
+      <section className="snap-section relative z-10 w-full bg-black py-10 pt-10 pb-20 px-4 sm:px-12 lg:px-16">
         <div className="max-w-8xl mx-auto text-left md:text-center space-y-12">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.25 }}
             style={{ fontFamily: "'Outfit', sans-serif" }}
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extralight leading-[1.1] tracking-[-0.025em]"
           >
@@ -781,7 +777,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.25 }}
             className="flex flex-col sm:flex-row items-center justify-start md:justify-center gap-5 pt-6"
           >
             <Link

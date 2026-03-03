@@ -237,7 +237,7 @@ export default function Portfolio() {
     <div className="bg-black min-h-screen">
 
       {/* ═══ Hero Section ═══ */}
-      <section className="relative pt-16 pb-4 md:pt-20 overflow-hidden">
+      <section className="snap-section relative pt-16 pb-4 md:pt-20 overflow-hidden">
         {/* subtle background grid */}
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.025]"
@@ -295,13 +295,15 @@ export default function Portfolio() {
       </section>
 
       {/* ═══ Solutions & Expertise ═══ */}
-      <div className="mt-20">
+      <section className="snap-section mt-20">
         <Solutions />
+      </section>
+      <section className="snap-section">
         <OurExperties />
-      </div>
+      </section>
 
       {/* ═══ Final CTA ═══ */}
-      <section className="py-12 md:py-16 border-t border-gray-800/50">
+      <section className="snap-section py-12 md:py-16 border-t border-gray-800/50">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

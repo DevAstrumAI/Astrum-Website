@@ -27,7 +27,7 @@ export default function Contact() {
         style={{ background:"radial-gradient(ellipse, rgba(145,79,252,0.06) 0%, transparent 70%)", filter:"blur(50px)" }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-24 md:pt-32 md:pb-28">
+      <section className="snap-section relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-24 md:pt-32 md:pb-28">
 
         {/* ── Hero heading ── */}
         <motion.div
@@ -245,7 +245,7 @@ export default function Contact() {
             </motion.div>
           </motion.div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
