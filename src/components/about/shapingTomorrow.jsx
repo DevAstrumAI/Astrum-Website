@@ -88,7 +88,7 @@ const ShapingTomorrow = () => {
           >
             We empower ambitious brands to unlock new possibilities, accelerate
             growth, and solve real-world challenges through cutting-edge AI and
-            digital transformation. Experience the future—built by{" "}
+            digital transformation. Experience the future built by{" "}
             <span className="bg-linear-to-r from-[#2B61E5] via-[#7B59D0] to-[#E93A8B] bg-clip-text text-transparent font-semibold">
               AstrumAI
             </span>

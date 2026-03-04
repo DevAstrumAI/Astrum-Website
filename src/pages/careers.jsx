@@ -149,7 +149,7 @@ function HeroVisual() {
             className="relative z-10 bg-linear-to-br from-[#914FFC] via-[#7B59D0] to-[#E93A8B] bg-clip-text text-transparent select-none"
           >
             A
-          </span>
+            </span>
         </motion.div>
       </motion.div>
 
@@ -193,7 +193,7 @@ function HeroVisual() {
             style={{ fontFamily: "'Outfit', sans-serif", fontSize: 11, fontWeight: 300, color: "rgba(192,132,252,0.9)", letterSpacing: "0.12em" }}
           >
             WE'RE HIRING
-          </span>
+            </span>
         </motion.div>
       </motion.div>
     </div>
@@ -309,20 +309,20 @@ const Careers = () => {
             >
               <a
                 href="#open-positions"
-                style={{ fontFamily: "'Outfit', sans-serif" }}
-                className="
+              style={{ fontFamily: "'Outfit', sans-serif" }}
+              className="
                   inline-flex items-center gap-2 px-7 py-3 md:px-9 md:py-3.5
-                  bg-linear-to-r from-[#2B61E5] via-[#7B59D0] to-[#E93A8B]
-                  hover:from-violet-600 hover:to-[#914FFC]
-                  text-white font-light text-sm md:text-base
-                  rounded-full shadow-lg shadow-purple-900/30
-                  transition-all duration-300
-                  hover:shadow-xl hover:shadow-purple-700/50
-                  hover:-translate-y-0.5 active:scale-95
-                "
-              >
-                View Open Positions →
-              </a>
+                bg-linear-to-r from-[#2B61E5] via-[#7B59D0] to-[#E93A8B] 
+                hover:from-violet-600 hover:to-[#914FFC] 
+                text-white font-light text-sm md:text-base
+                rounded-full shadow-lg shadow-purple-900/30 
+                transition-all duration-300 
+                hover:shadow-xl hover:shadow-purple-700/50 
+                hover:-translate-y-0.5 active:scale-95
+              "
+            >
+              View Open Positions →
+            </a>
               <a
                 href="/contact-us"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
@@ -347,21 +347,21 @@ const Careers = () => {
           >
             <HeroVisual />
           </motion.div>
-        </div>
+          </div>
       </section>
 
       {/* ══ SECTIONS ══ */}
       <section className="snap-section">
-        <Mission />
+      <Mission />
       </section>
       <section className="snap-section">
-        <CoreValues />
+      <CoreValues />
       </section>
       <section className="snap-section">
-        <OurBenefits />
+      <OurBenefits />
       </section>
       <section id="open-positions" className="snap-section">
-        <Hiring />
+      <Hiring />
       </section>
     </div>
   );

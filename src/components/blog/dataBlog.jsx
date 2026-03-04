@@ -26,7 +26,7 @@ const BlogData = [
         para:
           "How is this transformation actually felt? Look around:\n" +
           "• Smarter Security & Smoother Onboarding\n" +
-          "Legacy fraud detection is playing catch-up. AI analyses patterns in real-time, spotting anomalies human eyes miss, saving billions and protecting customers. Simultaneously, AI automates complex client onboarding, slashing processing times from days to minutes – a win for both institutions and users.\n" +
+          "Legacy fraud detection is playing catch-up. AI analyses patterns in real-time, spotting anomalies human eyes miss, saving billions and protecting customers. Simultaneously, AI automates complex client onboarding, slashing processing times from days to minutes, a win for both institutions and users.\n" +
           "• Hyper-Personalisation: Banking Gets Bespoke\n" +
           "The era of one-size-fits-all banking is fading. AI analyses individual financial behaviours, preferences, and goals, enabling institutions to deliver truly personalised product recommendations, financial advice, and experiences. It's marketing transformed into meaningful engagement.\n" +
           "• The Investment Frontier\n" +
@@ -91,7 +91,7 @@ const BlogData = [
       },
       {
         heading: "Final Thoughts: How to Navigate the AI Wave",
-        para: "The AI revolution isn't coming, it's already here. The question is: Are you riding the wave or just caught in the hype? With information overload, how can businesses and investors stay ahead? \n\n• Follow credible sources (industry leaders, big tech investments). \n• Look for real use cases, not just flashy demos. \n• Consult specialists (like Julien in FinTech or AstrumAI for enterprise solutions). \n\n As Atif puts it: \"Take the best of humanity — art, culture, problem-solving— and embed it into AI. That's how we ensure AI benefits society.\"",
+        para: "The AI revolution isn't coming, it's already here. The question is: Are you riding the wave or just caught in the hype? With information overload, how can businesses and investors stay ahead? \n\n• Follow credible sources (industry leaders, big tech investments). \n• Look for real use cases, not just flashy demos. \n• Consult specialists (like Julien in FinTech or AstrumAI for enterprise solutions). \n\n As Atif puts it: \"Take the best of humanity, art, culture, problem-solving— and embed it into AI. That's how we ensure AI benefits society.\"",
       },
       {
         heading: "What's Next?",

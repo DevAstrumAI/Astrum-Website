@@ -86,7 +86,7 @@ function ProjectDetail() {
             </div>
 
             {/* Right: Large Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semi-bold leading-[1.05] tracking-tight">
+            <h1 className="ml-0 md:ml-auto w-full md:w-auto max-w-3xl text-left md:text-right text-4xl md:text-5xl lg:text-6xl font-semi-bold leading-[1.05] tracking-tight">
               Customer Success Story:
               <br />
               <span className="text-gray-400">{project.name} | AstrumAI</span>

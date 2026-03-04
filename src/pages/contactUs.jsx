@@ -6,7 +6,7 @@ const CONTACT_ITEMS = [
   { icon: Phone,  label: "Call Us",        value: "+44 7884 051872",    sub: null },
   { icon: Mail,   label: "Email Us",       value: "info@astrumai.tech", sub: null },
   { icon: MapPin, label: "Head Office",    value: "London, United Kingdom", sub: null },
-  { icon: Clock,  label: "Opening Hours",  value: "Mon – Sat  ·  9 AM – 6 PM", sub: "UK Time" },
+  { icon: Clock,  label: "Opening Hours",  value: "Mon to Sat  ·  9 AM to 6 PM", sub: "UK Time" },
 ];
 
 const INPUT = "w-full px-4 py-3 bg-white/[0.03] border border-white/[0.07] rounded-xl text-gray-200 placeholder-gray-600 text-sm font-light focus:outline-none focus:border-[#914FFC]/40 transition-colors";

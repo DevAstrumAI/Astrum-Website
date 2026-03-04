@@ -10,6 +10,7 @@ import bigCommerce from "../../assets/big-commerce.png";
 import ContactForm from "../contactForm";
 import { Link } from "react-router-dom";
 import IndustryHeroVisual from "./IndustryHeroVisual";
+import { ArrowLeft } from "lucide-react";
 
 /* ── shared class strings ── */
 const CARD = "group p-6 md:p-8 rounded-2xl border border-white/8 bg-white/[0.025] hover:bg-white/[0.05] hover:-translate-y-1 transition-all duration-300 flex flex-col gap-3";
@@ -25,6 +26,14 @@ const fadeUp = { initial: { opacity: 0, y: 24 }, whileInView: { opacity: 1, y: 0
 const Fintech = () => {
   return (
     <div className="min-h-screen text-white bg-black">
+      <div className="max-w-7xl mx-auto px-6 pt-3 pb-2">
+        <Link
+          to="/industries"
+          className="inline-flex items-center gap-1.5 text-gray-500 hover:text-gray-200 transition-colors text-xs tracking-wide"
+        >
+          <ArrowLeft className="w-3.5 h-3.5" /> Back to Industries
+        </Link>
+      </div>
 
       {/* ── Hero ── */}
       <section className="snap-section relative pt-4 pb-16 px-6 sm:px-12 lg:px-16 overflow-hidden">
@@ -54,7 +63,7 @@ const Fintech = () => {
       </section>
 
       {/* ── Challenges ── */}
-      <section className="snap-section py-16 md:py-24 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-10 md:py-16 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="mb-12">
             <p className={SECTION_LABEL}>Challenges</p>
@@ -84,7 +93,7 @@ const Fintech = () => {
       </section>
 
       {/* ── Clients & Partners ── */}
-      <section className="snap-section py-16 md:py-20 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-10 md:py-14 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="mb-12">
             <p className={SECTION_LABEL}>Who We Serve</p>
@@ -108,7 +117,7 @@ const Fintech = () => {
       </section>
 
       {/* ── Solutions ── */}
-      <section className="snap-section py-16 md:py-24 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-10 md:py-16 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="mb-12">
             <p className={SECTION_LABEL}>Solutions</p>
@@ -133,7 +142,7 @@ const Fintech = () => {
       </section>
 
       {/* ── Technology Partners ── */}
-      <section className="snap-section py-16 md:py-20 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-10 md:py-14 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="mb-12">
             <p className={SECTION_LABEL}>Ecosystem</p>
@@ -151,7 +160,7 @@ const Fintech = () => {
       </section>
 
       {/* ── Why Choose ── */}
-      <section className="snap-section py-16 md:py-20 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-10 md:py-14 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp}
             className="rounded-2xl border border-white/10 overflow-hidden"
@@ -165,10 +174,10 @@ const Fintech = () => {
               </div>
               <div className="space-y-4">
                 {[
-                  "Deep Industry Knowledge – Extensive experience delivering secure, scalable fintech platforms.",
-                  "Security-First Mindset – Adherence to PCI DSS, GDPR, and evolving financial regulations.",
-                  "Built to Scale – AI, blockchain, cloud infrastructure, and API-first architectures.",
-                  "Full-Lifecycle Delivery – Strategy, design, deployment and scaling under one roof.",
+                  "Deep Industry Knowledge: Extensive experience delivering secure, scalable fintech platforms.",
+                  "Security-First Mindset: Adherence to PCI DSS, GDPR, and evolving financial regulations.",
+                  "Built to Scale: AI, blockchain, cloud infrastructure, and API-first architectures.",
+                  "Full-Lifecycle Delivery: Strategy, design, deployment and scaling under one roof.",
                 ].map((text, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <div className="w-1 h-1 rounded-full bg-[#914FFC] mt-2 shrink-0" />

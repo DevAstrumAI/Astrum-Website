@@ -44,7 +44,7 @@ export default function Mission() {
               className="text-lg md:text-xl font-extralight text-gray-200 leading-[1.7] tracking-tight"
             >
               At AstrumAI, we build reliable AI systems for critical decisions.
-              Across industries, AI is central — but many organizations still lack
+              Across industries, AI is central, but many organizations still lack
               a clear path from pilot to profit.
             </p>
             <p
@@ -77,7 +77,7 @@ export default function Mission() {
                 Data Engine
               </span>{" "}
               fuels advanced LLMs, generative, and computer vision models with
-              high-quality data — helping organizations customize and{" "}
+              high-quality data, helping organizations customize and{" "}
               <span className="bg-linear-to-r from-[#2B61E5] via-[#7B59D0] to-[#E93A8B] bg-clip-text text-transparent font-light">
                 Apply AI
               </span>{" "}
@@ -89,7 +89,7 @@ export default function Mission() {
               <span className="bg-linear-to-r from-[#2B61E5] via-[#7B59D0] to-[#E93A8B] bg-clip-text text-transparent font-light">
                 AstrumAI Generative AI Platform
               </span>{" "}
-              — helping organizations successfully apply AI to their most critical
+              helping organizations successfully apply AI to their most critical
               business and government decisions.
             </p>
           </motion.div>

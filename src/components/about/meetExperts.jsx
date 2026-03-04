@@ -91,7 +91,7 @@ export default function MeetExperts() {
           >
             Transform your vision into a working prototype with our MVP & PoC
             development services. We help you rapidly build, validate, and
-            iterate your product — reducing risk while accelerating time to
+            iterate your product, reducing risk while accelerating time to
             market.
           </p>
         </motion.div>

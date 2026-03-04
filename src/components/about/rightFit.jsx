@@ -61,7 +61,7 @@ export default function RightFit() {
               <span className="bg-linear-to-r from-[#2B61E5] via-[#7B59D0] to-[#E93A8B] bg-clip-text text-transparent font-semibold">
                 The Right Fit
               </span>
-              —aligning the right expertise, the right technology, and the right
+              aligning the right expertise, the right technology, and the right
               process to deliver measurable success for every client
             </motion.h2>
 

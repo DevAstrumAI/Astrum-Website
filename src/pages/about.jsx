@@ -6,6 +6,7 @@ import CoreValues from "../components/about/coreValues";
 import MeetExperts from "../components/about/meetExperts";
 import ChooseAstrumai from "../components/about/chooseAstrumai";
 import RightFit from "../components/about/rightFit";
+import WhoWeAre from "../components/about/whoWeAre";
 
 function AboutBackground() {
   const canvasRef = useRef(null);
@@ -147,6 +148,9 @@ export default function About() {
           <ShapingTomorrow />
         </section>
         <div className="space-y-0">
+          <div>
+            <WhoWeAre />
+          </div>
           <section className="snap-section">
           <CeoMessage />
           </section>
@@ -156,9 +160,9 @@ export default function About() {
           <section className="snap-section">
           <RightFit />
           </section>
-          <section className="snap-section">
-          <CoreValues />
-          </section>
+          <div>
+            <CoreValues />
+          </div>
           <section className="snap-section">
           <MeetExperts />
           </section>

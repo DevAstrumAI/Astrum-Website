@@ -38,7 +38,7 @@ export default function CoreValues() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16 md:mb-20 text-left"
+          className="mb-16 md:mb-20 text-center"
         >
           <h2
             style={{ fontFamily: "'Outfit', sans-serif" }}
@@ -52,7 +52,7 @@ export default function CoreValues() {
         </motion.div>
 
         {/* Values Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        <div className="grid grid-cols-2 gap-x-16 gap-y-12 max-w-3xl mx-auto">
           {values.map((value, index) => (
             <motion.div
               key={index}

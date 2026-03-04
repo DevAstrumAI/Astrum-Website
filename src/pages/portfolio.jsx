@@ -282,7 +282,7 @@ export default function Portfolio() {
               style={{ fontFamily: "'Outfit', sans-serif" }}
               className="text-base md:text-lg text-gray-400 font-light leading-[1.8] max-w-2xl mx-auto lg:mx-0"
             >
-              Engineered by AI specialists for AI specialists — enabling
+              Engineered by AI specialists for AI specialists, enabling
               organizations to obtain production-grade results, delivered fast.
             </motion.p>
           </motion.div>

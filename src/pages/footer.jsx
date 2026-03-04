@@ -29,7 +29,7 @@ export default function Footer() {
     <footer className="relative mt-16 bg-black border-t border-white/[0.06] overflow-hidden">
       <div className="relative w-full px-6 md:px-10 lg:px-14 py-10 md:py-12">
         <div className="w-full border-y border-white/[0.08] bg-white/[0.02] backdrop-blur-xl py-7 md:py-9">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] gap-10 lg:gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] gap-10 lg:gap-8 items-center">
             <div className="space-y-3 text-left">
               <h2
                 style={{ fontFamily: "'Outfit', sans-serif" }}

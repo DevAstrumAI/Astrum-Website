@@ -281,7 +281,7 @@ const Navbar = () => {
           </NavDropdown>
 
           <NavItem href="/portfolio">Portfolio</NavItem>
-          <NavItem href="/blog">Blog</NavItem>
+          <NavItem href="/blog">Blogs/TechTalks</NavItem>
           <NavItem href="/careers">Careers</NavItem>
         </div>
 
@@ -396,7 +396,7 @@ const Navbar = () => {
               </MobileAccordion>
 
               <MobileNavItem href="/portfolio" onClick={() => setIsMenuOpen(false)}>Portfolio</MobileNavItem>
-              <MobileNavItem href="/blog" onClick={() => setIsMenuOpen(false)}>Blog</MobileNavItem>
+              <MobileNavItem href="/blog" onClick={() => setIsMenuOpen(false)}>Blogs/TechTalks</MobileNavItem>
               <MobileNavItem href="/careers" onClick={() => setIsMenuOpen(false)}>Careers</MobileNavItem>
 
               {/* Mobile CTA */}

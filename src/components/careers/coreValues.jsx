@@ -12,7 +12,7 @@ const values = [
   { icon: GiHoleLadder,title: "Bold Ambition",           description: "We aim high and pursue ambitious goals without fear. Setbacks are learning opportunities, and we use every challenge to refine our approach and accelerate success." },
   { icon: FaUsersLine, title: "Collaborative Energy",    description: "We thrive on collective achievement. By supporting one another with trust, respect, and transparency, we create an environment where ideas flow freely." },
   { icon: Shield,      title: "Ownership Mindset",       description: "We take responsibility for outcomes and embrace the power to make meaningful change. Initiative, accountability, and proactive action are how we drive impact." },
-  { icon: Zap,         title: "Relentless Drive",        description: "Obstacles don't stop us — we tackle challenges head-on. By stepping beyond comfort zones and rigorously testing solutions, we solve complex problems." },
+  { icon: Zap,         title: "Relentless Drive",        description: "Obstacles don't stop us. We tackle challenges head-on by stepping beyond comfort zones and rigorously testing solutions to solve complex problems." },
   { icon: FaRunning,   title: "Move Fast, Learn Fast",   description: "We act with purpose and agility. Quick, informed decisions allow us to adapt rapidly, experiment safely, and continuously improve our results." },
   { icon: Trophy,      title: "Impact Over Intentions",  description: "Results are our measure of success. We set precise goals, track progress objectively, and hold ourselves accountable to the outcomes we deliver." },
   { icon: Star,        title: "Excellence in Every Detail", description: "Quality is never accidental. From minute details to overarching strategies, we design, execute, and scale with precision, care, and deliberate intent." },
@@ -20,7 +20,7 @@ const values = [
 
 export default function CoreValues() {
   return (
-    <section className="py-16 md:py-24 bg-black border-t border-white/[0.04]">
+    <div className="py-10 md:py-16 bg-black border-t border-white/[0.04]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Heading */}
@@ -90,6 +90,6 @@ export default function CoreValues() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

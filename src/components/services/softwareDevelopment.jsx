@@ -107,7 +107,7 @@ const SoftwareDevelopment = () => {
           <motion.h2
             {...revealUp}
             style={{ fontFamily: "'Outfit', sans-serif" }}
-            className="text-3xl md:text-5xl font-extralight text-white mb-12 tracking-[-0.02em] leading-[1.15]"
+            className="text-3xl md:text-5xl font-extralight text-white mb-12 tracking-[-0.02em] leading-[1.15] text-center"
           >
             <span className="bg-linear-to-r from-[#2B61E5] to-[#E93A8B] bg-clip-text text-transparent font-normal">
               What
@@ -115,25 +115,25 @@ const SoftwareDevelopment = () => {
             we do?
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
             {/* App Development Card */}
             <motion.div
               initial={{ opacity: 0, y: 26, scale: 0.98 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: false, amount: 0.22 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="rounded-[45px] p-12 border border-white/10 bg-white/[0.04] text-gray-100 flex flex-col justify-between min-h-[380px] shadow-[0_16px_40px_rgba(145,79,252,0.08)] hover:shadow-[0_20px_50px_rgba(145,79,252,0.16)] transition-all duration-500 hover:translate-y-[-4px] group"
+              className="rounded-2xl p-7 md:p-8 border border-white/10 bg-white/[0.03] text-gray-100 flex flex-col justify-between min-h-[300px] shadow-[0_10px_26px_rgba(145,79,252,0.08)] hover:shadow-[0_16px_36px_rgba(145,79,252,0.14)] transition-all duration-500 hover:translate-y-[-3px] group"
             >
-              <div className="space-y-8">
+              <div className="space-y-5">
                 <h3
                   style={{ fontFamily: "'Outfit', sans-serif" }}
-                  className="text-2xl md:text-3xl lg:text-4xl font-extralight tracking-tight"
+                  className="text-xl md:text-2xl font-extralight tracking-tight"
                 >
                   App Development
                 </h3>
                 <p
                   style={{ fontFamily: "'Outfit', sans-serif" }}
-                  className="text-base md:text-lg text-gray-300 font-light leading-relaxed max-w-sm"
+                  className="text-sm md:text-base text-gray-300 font-light leading-relaxed max-w-sm"
                 >
                   We build user-friendly, custom apps tailored to your needs.
                   Using agile methodologies and scalable architectures, our
@@ -141,7 +141,7 @@ const SoftwareDevelopment = () => {
                   advancements.
                 </p>
               </div>
-              <div className="pt-8 text-left">
+              <div className="pt-6 text-left">
                 <button
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                   className="text-gray-200 border-b border-white/20 pb-1 text-sm font-medium hover:text-gray-100 hover:border-white/40 transition-all group-hover:pl-2"
@@ -157,18 +157,18 @@ const SoftwareDevelopment = () => {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: false, amount: 0.22 }}
               transition={{ duration: 0.6, delay: 0.12, ease: "easeOut" }}
-              className="rounded-[45px] p-12 border border-white/10 bg-white/[0.04] text-gray-100 flex flex-col justify-between min-h-[380px] shadow-[0_16px_40px_rgba(145,79,252,0.08)] hover:shadow-[0_20px_50px_rgba(145,79,252,0.16)] transition-all duration-500 hover:translate-y-[-4px] group"
+              className="rounded-2xl p-7 md:p-8 border border-white/10 bg-white/[0.03] text-gray-100 flex flex-col justify-between min-h-[300px] shadow-[0_10px_26px_rgba(145,79,252,0.08)] hover:shadow-[0_16px_36px_rgba(145,79,252,0.14)] transition-all duration-500 hover:translate-y-[-3px] group"
             >
-              <div className="space-y-8">
+              <div className="space-y-5">
                 <h3
                   style={{ fontFamily: "'Outfit', sans-serif" }}
-                  className="text-2xl md:text-3xl lg:text-4xl font-extralight tracking-tight"
+                  className="text-xl md:text-2xl font-extralight tracking-tight"
                 >
                   Web Development
                 </h3>
                 <p
                   style={{ fontFamily: "'Outfit', sans-serif" }}
-                  className="text-base md:text-lg text-gray-300 font-light leading-relaxed max-w-sm"
+                  className="text-sm md:text-base text-gray-300 font-light leading-relaxed max-w-sm"
                 >
                   We craft custom websites with the latest technologies,
                   combining seamless functionality and captivating UI/UX design.
@@ -176,7 +176,7 @@ const SoftwareDevelopment = () => {
                   and scale with your business.
                 </p>
               </div>
-              <div className="pt-8 text-left">
+              <div className="pt-6 text-left">
                 <button
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                   className="text-gray-200 border-b border-white/20 pb-1 text-sm font-medium hover:text-gray-100 hover:border-white/40 transition-all group-hover:pl-2"
@@ -195,7 +195,7 @@ const SoftwareDevelopment = () => {
           <motion.h2
             {...revealUp}
             style={{ fontFamily: "'Outfit', sans-serif" }}
-            className="text-3xl md:text-5xl font-extralight text-white mb-4 tracking-[-0.02em] leading-[1.15]"
+            className="text-3xl md:text-5xl font-extralight text-white mb-4 tracking-[-0.02em] leading-[1.15] text-center"
           >
             <span className="bg-linear-to-r from-[#2B61E5] to-[#E93A8B] bg-clip-text text-transparent font-normal">
               How
@@ -206,13 +206,13 @@ const SoftwareDevelopment = () => {
             {...revealUp}
             transition={{ duration: 0.65, delay: 0.1, ease: "easeOut" }}
             style={{ fontFamily: "'Outfit', sans-serif" }}
-            className="text-lg text-gray-500 mb-16 max-w-2xl font-light"
+            className="text-sm md:text-base text-gray-500 mb-12 md:mb-14 max-w-2xl mx-auto font-light text-center leading-[1.85]"
           >
             A streamlined, collaborative process designed to deliver the right
-            solution-on time and with precision.
+            solution on time and with precision.
           </motion.p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               {
                 id: "1",
@@ -241,17 +241,25 @@ const SoftwareDevelopment = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
-                className="p-8 rounded-[35px] border border-white/10 bg-white/5 hover:bg-white/10 transition-colors group"
+                className="p-6 rounded-2xl border border-white/8 bg-white/[0.025] hover:bg-white/[0.05] hover:-translate-y-1 transition-all duration-300"
               >
-                <span
-                  style={{ fontFamily: "'Outfit', sans-serif" }}
-                  className="text-xl md:text-2xl font-extralight text-white mb-4 block tracking-tight"
-                >
-                  {step.id}. {step.title}
-                </span>
+                <div className="flex items-center gap-3 mb-4">
+                  <span
+                    style={{ fontFamily: "'Outfit', sans-serif" }}
+                    className="text-[11px] font-light text-gray-600 uppercase tracking-widest"
+                  >
+                    0{step.id}
+                  </span>
+                  <h3
+                    style={{ fontFamily: "'Outfit', sans-serif" }}
+                    className="text-base font-light text-gray-200 tracking-tight"
+                  >
+                    {step.title}
+                  </h3>
+                </div>
                 <p
                   style={{ fontFamily: "'Outfit', sans-serif" }}
-                  className="text-gray-500 text-base leading-relaxed font-light"
+                  className="text-sm text-gray-500 leading-relaxed font-light"
                 >
                   {step.desc}
                 </p>
@@ -267,12 +275,12 @@ const SoftwareDevelopment = () => {
           <motion.h2
             {...revealUp}
             style={{ fontFamily: "'Outfit', sans-serif" }}
-            className="text-3xl md:text-5xl font-extralight text-white mb-12 tracking-[-0.02em] leading-[1.15]"
+            className="text-3xl md:text-5xl font-extralight text-white mb-12 tracking-[-0.02em] leading-[1.15] text-center"
           >
-            Who we do it{" "}
             <span className="bg-linear-to-r from-[#2B61E5] to-[#E93A8B] bg-clip-text text-transparent font-normal">
-              for
-            </span>
+              Who
+            </span>{" "}
+            we do it for?
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -528,8 +536,7 @@ const SoftwareDevelopment = () => {
               style={{ fontFamily: "'Outfit', sans-serif" }}
               className="text-lg text-gray-500 font-light max-w-sm leading-relaxed text-left"
             >
-              15+ years of building software that performs, scales, and delivers
-              impact.
+              Building software that performs, scales, and delivers impact.
             </p>
           </motion.div>
 

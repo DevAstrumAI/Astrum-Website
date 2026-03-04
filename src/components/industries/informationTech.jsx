@@ -4,6 +4,7 @@ import ChallengesInIT from "../../assets/Challenges-in-IT.jpeg";
 import ContactForm from "../contactForm";
 import { Link } from "react-router-dom";
 import IndustryHeroVisual from "./IndustryHeroVisual";
+import { ArrowLeft } from "lucide-react";
 
 const CARD = "group p-6 md:p-8 rounded-2xl border border-white/8 bg-white/[0.025] hover:bg-white/[0.05] hover:-translate-y-1 transition-all duration-300 flex flex-col gap-3";
 const CARD_TITLE = "text-base md:text-lg font-light text-gray-200 leading-snug tracking-tight";
@@ -17,6 +18,14 @@ const fadeUp = { initial: { opacity: 0, y: 24 }, whileInView: { opacity: 1, y: 0
 const InformationTech = () => {
   return (
     <div className="min-h-screen text-white bg-black">
+      <div className="max-w-7xl mx-auto px-6 pt-3 pb-2">
+        <Link
+          to="/industries"
+          className="inline-flex items-center gap-1.5 text-gray-500 hover:text-gray-200 transition-colors text-xs tracking-wide"
+        >
+          <ArrowLeft className="w-3.5 h-3.5" /> Back to Industries
+        </Link>
+      </div>
 
       {/* ── Hero ── */}
       <section className="snap-section relative pt-4 pb-16 px-6 sm:px-12 lg:px-16 overflow-hidden">
@@ -32,7 +41,7 @@ const InformationTech = () => {
               Empowering IT with <span className={ACCENT}>Intelligent, Scalable Solutions</span>
             </h2>
             <p className="text-sm md:text-base text-gray-500 max-w-md leading-[1.85] font-light">
-              We deliver custom software that streamlines IT operations, strengthens infrastructure management, and enhances cybersecurity—helping IT teams drive innovation and operational excellence.
+              We deliver custom software that streamlines IT operations, strengthens infrastructure management, and enhances cybersecurity, helping IT teams drive innovation and operational excellence.
             </p>
             <Link to="/contact-us"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-linear-to-r from-[#2B61E5] via-[#7B59D0] to-[#E93A8B] hover:from-violet-600 hover:to-[#914FFC] text-white font-light text-sm transition-all duration-300 shadow-lg shadow-purple-900/30 hover:-translate-y-0.5 active:scale-95">
@@ -46,7 +55,7 @@ const InformationTech = () => {
       </section>
 
       {/* ── Challenges ── */}
-      <section className="snap-section py-16 md:py-24 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-10 md:py-16 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="mb-12">
             <p className={SECTION_LABEL}>Challenges</p>
@@ -57,7 +66,7 @@ const InformationTech = () => {
               { title: "Disconnected Systems & Tool Sprawl", desc: "Hybrid and multi-cloud environments create fragmented platforms, leading to inefficiencies and data silos." },
               { title: "Manual & Repetitive Workloads", desc: "Routine tasks like user provisioning and patch management consume time and slow service delivery." },
               { title: "Evolving Cybersecurity Risks", desc: "Growing digital footprints increase exposure to threats and complicate compliance." },
-              { title: "Limited Real-Time Visibility", desc: "Without centralized monitoring, issues escalate unnoticed—resulting in downtime and reactive responses." },
+              { title: "Limited Real-Time Visibility", desc: "Without centralized monitoring, issues escalate unnoticed, resulting in downtime and reactive responses." },
               { title: "Escalating Cloud Costs", desc: "Cloud sprawl and underutilized resources inflate budgets without proportional business value." },
               { title: "Legacy System Limitations", desc: "Outdated infrastructure hinders innovation, complicates integrations, and increases technical debt." },
             ].map((item, i) => (
@@ -78,7 +87,7 @@ const InformationTech = () => {
       </section>
 
       {/* ── Solutions ── */}
-      <section className="snap-section py-16 md:py-24 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-10 md:py-16 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="mb-12">
             <p className={SECTION_LABEL}>Solutions</p>
@@ -86,9 +95,9 @@ const InformationTech = () => {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { title: "Integrated IT Ecosystems", desc: "Unify ITSM, monitoring, and security tools into a cohesive platform—eliminating silos." },
+              { title: "Integrated IT Ecosystems", desc: "Unify ITSM, monitoring, and security tools into a cohesive platform, eliminating silos." },
               { title: "Intelligent Workflow Automation", desc: "RPA, scripting, and custom automation to eliminate repetitive tasks and free strategic capacity." },
-              { title: "Built-In Cyber Resilience", desc: "Security at every layer—identity controls, encryption, and automated compliance." },
+              { title: "Built-In Cyber Resilience", desc: "Security at every layer: identity controls, encryption, and automated compliance." },
               { title: "Advanced Monitoring & Insights", desc: "Centralized observability with real-time visibility and proactive issue resolution." },
               { title: "Cloud Performance & Cost Governance", desc: "Optimize multi-cloud environments to reduce waste and enhance operational performance." },
               { title: "Next-Gen System Modernization", desc: "Transform legacy infrastructure into scalable, future-ready systems without disruption." },
@@ -103,15 +112,15 @@ const InformationTech = () => {
       </section>
 
       {/* ── Our IT Solutions (scrollable list) ── */}
-      <section className="snap-section py-16 md:py-24 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
-          <div className="lg:w-1/3">
-            <motion.div {...fadeUp} className="lg:sticky lg:top-28">
-              <p className={SECTION_LABEL}>Capability</p>
-              <h2 className={SECTION_HEADING}>Our <span className={ACCENT}>IT Solutions</span></h2>
-            </motion.div>
-          </div>
-          <div className="lg:w-2/3 space-y-0">
+      <section className="snap-section py-10 md:py-16 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+        <div className="max-w-7xl mx-auto">
+          <motion.div {...fadeUp} className="mb-12 text-center">
+            <p className={SECTION_LABEL}>Capability</p>
+            <h2 className={SECTION_HEADING}>
+              Our <span className={ACCENT}>IT Solutions</span>
+            </h2>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { title: "DevOps & Infrastructure Automation", desc: "CI/CD pipelines, infrastructure provisioning, and smooth cloud migrations for deployment speed and reliability." },
               { title: "IT Service Management Solutions", desc: "ITSM platforms that streamline ticketing, automate workflows, and enhance service delivery." },
@@ -120,10 +129,9 @@ const InformationTech = () => {
               { title: "RPA & Workflow Automation", desc: "Automate routine IT processes to boost efficiency and minimize human error." },
               { title: "Cloud Financial Optimization", desc: "Intelligent tools to track, manage, and optimize cloud spending and resource performance." },
             ].map((item, i) => (
-              <motion.div key={i} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.06 }}
-                className="border-t border-white/[0.07] py-7 group">
-                <h4 className="text-base md:text-xl font-light text-gray-200 mb-2 group-hover:text-white transition-colors tracking-tight">{item.title}</h4>
-                <p className="text-sm text-gray-500 leading-relaxed font-light max-w-xl">{item.desc}</p>
+              <motion.div key={i} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.07 }} className={CARD}>
+                <h4 className={CARD_TITLE}>{item.title}</h4>
+                <p className={CARD_DESC}>{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -131,7 +139,7 @@ const InformationTech = () => {
       </section>
 
       {/* ── Why Choose ── */}
-      <section className="snap-section py-16 md:py-20 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-10 md:py-14 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp}
             className="rounded-2xl border border-white/10 overflow-hidden"
@@ -145,10 +153,10 @@ const InformationTech = () => {
               </div>
               <div className="space-y-4">
                 {[
-                  "Proven Infrastructure Expertise – Experience designing and managing complex IT environments.",
-                  "Security-First Mindset – Robust cybersecurity frameworks that safeguard data and ensure compliance.",
-                  "Built to Scale – Flexible, future-ready systems that evolve with your organization's growth.",
-                  "Agile & Adaptive Delivery – Rapid development and continuous improvement for faster value.",
+                  "Proven Infrastructure Expertise: Experience designing and managing complex IT environments.",
+                  "Security-First Mindset: Robust cybersecurity frameworks that safeguard data and ensure compliance.",
+                  "Built to Scale: Flexible, future-ready systems that evolve with your organization's growth.",
+                  "Agile and Adaptive Delivery: Rapid development and continuous improvement for faster value.",
                 ].map((text, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <div className="w-1 h-1 rounded-full bg-[#914FFC] mt-2 shrink-0" />

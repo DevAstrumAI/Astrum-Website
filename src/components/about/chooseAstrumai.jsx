@@ -12,9 +12,9 @@ import { motion } from "framer-motion";
 const reasons = [
   {
     icon: TrendingUp,
-    title: "Proven Track Record",
+    title: "Client Success",
     description:
-      "Trusted by over 150+ clients across diverse industries worldwide. Successfully delivered 500+ projects, ranging from startups to enterprise-scale solutions. With a 95% client retention rate, our results speak for long-term value and reliability.",
+      "Trusted by clients across diverse industries worldwide. Successfully delivered projects ranging from startups to enterprise-scale solutions. Our long-term partnerships reflect consistent value and reliability.",
   },
   {
     icon: Users,

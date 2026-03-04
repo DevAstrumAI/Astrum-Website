@@ -6,7 +6,7 @@ import { ArrowLeft, Send } from "lucide-react";
 export default function ApplyNow() {
   const [searchParams] = useSearchParams();
   const role = searchParams.get("role") || "General Application";
-  const location = searchParams.get("location") || "Flexible";
+  const location = "London, UK";
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {

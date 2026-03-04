@@ -5,6 +5,7 @@ import propTechSolution2 from "../../assets/propTech-solutions2.jpeg";
 import ContactForm from "../contactForm";
 import { Link } from "react-router-dom";
 import IndustryHeroVisual from "./IndustryHeroVisual";
+import { ArrowLeft } from "lucide-react";
 
 const CARD = "group p-6 md:p-8 rounded-2xl border border-white/8 bg-white/[0.025] hover:bg-white/[0.05] hover:-translate-y-1 transition-all duration-300 flex flex-col gap-3";
 const CARD_TITLE = "text-base md:text-lg font-light text-gray-200 leading-snug tracking-tight";
@@ -18,6 +19,14 @@ const fadeUp = { initial: { opacity: 0, y: 24 }, whileInView: { opacity: 1, y: 0
 const PropTech = () => {
   return (
     <div className="min-h-screen text-white bg-black">
+      <div className="max-w-7xl mx-auto px-6 pt-3 pb-2">
+        <Link
+          to="/industries"
+          className="inline-flex items-center gap-1.5 text-gray-500 hover:text-gray-200 transition-colors text-xs tracking-wide"
+        >
+          <ArrowLeft className="w-3.5 h-3.5" /> Back to Industries
+        </Link>
+      </div>
 
       {/* ── Hero ── */}
       <section className="snap-section relative pt-4 pb-16 px-6 sm:px-12 lg:px-16 overflow-hidden">
@@ -47,13 +56,13 @@ const PropTech = () => {
       </section>
 
       {/* ── Solutions 1 ── */}
-      <section className="snap-section py-16 md:py-24 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-10 md:py-16 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp} className="mb-12">
             <p className={SECTION_LABEL}>Solutions</p>
             <h2 className={SECTION_HEADING}>Next-Generation <span className={ACCENT}>PropTech Solutions</span></h2>
           </motion.div>
-          <div className="flex flex-col lg:flex-row items-start gap-10">
+          <div className="flex flex-col lg:flex-row items-start lg:items-stretch gap-10">
             <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 { title: "Intelligent Property Operations", desc: "Streamline lease management, tenant screening, maintenance tracking, and financial reporting with AI automation." },
@@ -67,7 +76,7 @@ const PropTech = () => {
                 </motion.div>
               ))}
             </div>
-            <div className="lg:w-1/3 rounded-2xl overflow-hidden">
+            <div className="lg:w-1/3 lg:self-stretch rounded-2xl overflow-hidden">
               <img src={propTechSolution} alt="PropTech Solution" className="w-full h-full object-cover shadow-xl shadow-blue-900/10" />
             </div>
           </div>
@@ -75,9 +84,9 @@ const PropTech = () => {
       </section>
 
       {/* ── Solutions 2 ── */}
-      <section className="snap-section py-16 md:py-24 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-10 md:py-16 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row-reverse items-start gap-10">
+          <div className="flex flex-col lg:flex-row-reverse items-start lg:items-stretch gap-10">
             <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 { title: "Smart Buildings & IoT Integration", desc: "IoT-driven automation for energy efficiency, security systems, and predictive maintenance." },
@@ -91,7 +100,7 @@ const PropTech = () => {
                 </motion.div>
               ))}
             </div>
-            <div className="lg:w-1/3 rounded-2xl overflow-hidden">
+            <div className="lg:w-1/3 lg:self-stretch rounded-2xl overflow-hidden">
               <img src={propTechSolution2} alt="PropTech Solution 2" className="w-full h-full object-cover shadow-xl shadow-purple-900/10" />
             </div>
           </div>
@@ -99,7 +108,7 @@ const PropTech = () => {
       </section>
 
       {/* ── Why Choose ── */}
-      <section className="snap-section py-16 md:py-20 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
+      <section className="snap-section py-10 md:py-14 px-6 sm:px-12 lg:px-16 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeUp}
             className="rounded-2xl border border-white/10 overflow-hidden"
@@ -113,10 +122,10 @@ const PropTech = () => {
               </div>
               <div className="space-y-4">
                 {[
-                  "End-to-End Development – From strategy and design to deployment and scaling.",
-                  "Data-Driven Intelligence – AI and big data to optimize valuations and tenant experiences.",
-                  "Seamless System Integration – Connect PropTech platforms with IoT, CRM, and compliance systems.",
-                  "Security & Compliance – Regulation-ready solutions that protect sensitive property data.",
+                  "End-to-End Development: From strategy and design to deployment and scaling.",
+                  "Data-Driven Intelligence: AI and big data to optimize valuations and tenant experiences.",
+                  "Seamless System Integration: Connect PropTech platforms with IoT, CRM, and compliance systems.",
+                  "Security and Compliance: Regulation-ready solutions that protect sensitive property data.",
                 ].map((text, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <div className="w-1 h-1 rounded-full bg-[#914FFC] mt-2 shrink-0" />

@@ -7,7 +7,7 @@ import parentalImg  from "../../assets/Parental-Support.jpeg";
 
 const benefits = [
   { title: "Wellness & Total Care",              image: healthImg,
-    description: "We prioritize your overall wellbeing with comprehensive health coverage, mental wellness support, flexible time-off policies, and work-life balance initiatives — designed to help you recharge, thrive, and perform at your best." },
+    description: "We prioritize your overall wellbeing with comprehensive health coverage, mental wellness support, flexible time-off policies, and work-life balance initiatives designed to help you recharge, thrive, and perform at your best." },
   { title: "Continuous Learning & Advancement",  image: growthImg,
     description: "Accelerate your growth with dedicated learning budgets, leadership programs, mentorship opportunities, training sessions, and knowledge-sharing events that empower both personal and professional development." },
   { title: "Vibrant Community & Culture",        image: communityImg,
@@ -18,7 +18,7 @@ const benefits = [
 
 export default function OurBenefits() {
   return (
-    <section className="py-16 md:py-24 bg-black border-t border-white/[0.04]">
+    <section className="py-10 md:py-16 bg-black border-t border-white/[0.04]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Header */}
@@ -27,7 +27,7 @@ export default function OurBenefits() {
           whileInView={{ opacity:1, y:0 }}
           viewport={{ once:true }}
           transition={{ duration:0.6 }}
-          className="text-center mb-14 md:mb-20"
+          className="text-center mb-8 md:mb-12"
         >
           <h2
             style={{ fontFamily:"'Outfit', sans-serif" }}

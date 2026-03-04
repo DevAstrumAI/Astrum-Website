@@ -8,14 +8,14 @@ const departments = [
     name: "Business Operations",
     icon: Briefcase,
     jobs: [
-      { title: "Business Operations & Strategy Manager", location: "San Francisco, CA", applyLink: "#" },
+      { title: "Business Operations & Strategy Manager", location: "London, UK", applyLink: "#" },
     ],
   },
   {
     name: "Data Science and Analytics",
     icon: LineChart,
     jobs: [
-      { title: "Senior Data Scientist — ML Research", location: "Remote (US)", applyLink: "#" },
+      { title: "Senior Data Scientist, ML Research", location: "London, UK", applyLink: "#" },
       { title: "Analytics Engineer", location: "London, UK", applyLink: "#" },
     ],
   },
@@ -44,7 +44,7 @@ export default function Hiring() {
   const totalRoles = filtered.reduce((acc, d) => acc + d.jobs.length, 0);
 
   return (
-    <section className="bg-black py-16 md:py-24 border-t border-white/[0.04]">
+    <section className="bg-black py-10 md:py-16 border-t border-white/[0.04]">
 
       {/* Section header */}
       <motion.div

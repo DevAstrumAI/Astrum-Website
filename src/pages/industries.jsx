@@ -48,7 +48,7 @@ const INDUSTRIES = [
 export default function Industries() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <section className="snap-section relative px-6 sm:px-12 lg:px-16 overflow-hidden flex items-center">
+      <section className="snap-section relative px-6 sm:px-12 lg:px-16 overflow-hidden flex items-center justify-center">
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.025]"
           style={{
@@ -81,7 +81,7 @@ export default function Industries() {
           }}
         />
 
-        <div className="w-full max-w-7xl mx-auto relative z-10 text-left md:text-center py-12 md:py-16">
+        <div className="w-full max-w-7xl mx-auto relative z-10 text-center py-0">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ export default function Industries() {
             whileInView={{ scaleX: 1, opacity: 1 }}
             viewport={{ once: false, amount: 0.45 }}
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-            className="mx-0 md:mx-auto mt-4 h-px w-16 bg-linear-to-r from-[#914FFC] to-transparent md:from-transparent md:via-[#914FFC] md:to-transparent origin-left md:origin-center"
+            className="mx-auto mt-4 h-px w-16 bg-linear-to-r from-transparent via-[#914FFC] to-transparent origin-center"
           />
 
           <motion.p

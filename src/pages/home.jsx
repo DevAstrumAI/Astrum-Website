@@ -727,7 +727,7 @@ export default function Home() {
             className="text-gray-500 text-sm md:text-base max-w-xl md:mx-auto font-light leading-[1.85] text-left md:text-center"
           >
             From intelligent data pipelines to enterprise-ready AI systems,
-            our approach reshapes how AI creates measurable business value —
+            our approach reshapes how AI creates measurable business value
             built to perform in real-world environments.
           </motion.p>
         </div>

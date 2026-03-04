@@ -22,7 +22,7 @@ const AIProductDevelopment = () => {
           </h1>
           <div className={DIVIDER} />
           <p className="text-base text-gray-400 font-light leading-[1.8] max-w-md">
-            We design and develop AI-powered products that solve complex business challenges and scale efficiently — from idea validation to full deployment.
+            We design and develop AI-powered products that solve complex business challenges and scale efficiently, from idea validation to full deployment.
           </p>
           <Link to="/portfolio"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-linear-to-r from-[#2B61E5] via-[#7B59D0] to-[#E93A8B] hover:from-violet-600 hover:to-[#914FFC] text-white font-light text-sm transition-all duration-300 shadow-md hover:-translate-y-0.5 active:scale-95">
