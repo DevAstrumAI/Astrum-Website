@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 const points = [
   {
     label: "Mission",
-    title: "Building AI that creates measurable outcomes",
+    title: "Empowering businesses through innovative, ethical AI",
     description:
-      "Our mission is to help organizations solve real business challenges with responsible, production-ready AI. We design practical systems that improve decisions, accelerate operations, and unlock sustainable growth.",
+      "To empower businesses by building innovative, ethical, and scalable AI products that solve real-world challenges with precision and impact. We believe technology should be purposeful, responsible, and built to last.",
   },
   {
     label: "Vision",
-    title: "A future where intelligent systems empower every team",
+    title: "Redefining the future with human-centric AI",
     description:
-      "Our vision is to make advanced AI accessible, reliable, and human-centered across industries. We aim to be the trusted partner that transforms bold ideas into scalable impact through innovation and execution excellence.",
+      "To redefine the future with intelligent, human-centric AI solutions that drive meaningful transformation. We envision a world where advanced AI is accessible, trusted, and genuinely beneficial to every organisation.",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function WhoWeAre() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: index * 0.08, ease: "easeOut" }}
-              className="group relative rounded-3xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-md p-6 md:p-8 overflow-hidden"
+              className="group relative rounded-3xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-md p-6 md:p-8 overflow-hidden flex flex-col"
             >
               <p
                 style={{ fontFamily: "'Outfit', sans-serif" }}
