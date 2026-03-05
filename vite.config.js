@@ -12,4 +12,10 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
+  preview: {
+    historyApiFallback: true,
+  },
+  server: {
+    historyApiFallback: true,
+  },
 });
