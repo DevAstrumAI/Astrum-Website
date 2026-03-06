@@ -92,12 +92,7 @@ export default function Footer() {
             >
               © 2026 AstrumAI. All rights reserved.
             </p>
-            <p
-              style={{ fontFamily: "'Outfit', sans-serif" }}
-              className="text-xs text-gray-700 font-light"
-            >
-              Crafted with AI-first precision.
-            </p>
+           
           </div>
         </div>
       </div>
