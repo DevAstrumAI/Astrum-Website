@@ -908,7 +908,7 @@ const Hero = ({ headings }) => {
       className="
       relative z-10 w-full max-w-8xl mx-auto 
       px-4 sm:px-12 lg:px-16 
-      -mt-12 md:-mt-16 lg:-mt-20 py-20 
+      -mt-16 md:-mt-20 lg:-mt-24 pt-10 pb-16 md:py-20 
       flex flex-col-reverse lg:flex-row items-center gap-16
       "
     >
@@ -952,7 +952,8 @@ const Hero = ({ headings }) => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-6 pt-4"
         >
-          <button
+          <Link
+            to="/contact-us"
             style={{ fontFamily: "'Outfit', sans-serif" }}
             className="
               inline-flex items-center justify-center px-5 py-2.5 md:px-7 md:py-3
@@ -966,7 +967,7 @@ const Hero = ({ headings }) => {
             "
           >
             Get Quote
-          </button>
+          </Link>
           <Link
             to="https://calendly.com/bilal-astrumai/30min?month=2026-02"
             target="_blank"
@@ -989,7 +990,7 @@ const Hero = ({ headings }) => {
         initial={{ opacity: 0, scale: 0.85 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, delay: 0.3 }}
-        className="flex-1 relative flex mt-8 lg:mt-0 justify-center items-center"
+        className="flex-1 relative flex mt-2 lg:mt-0 justify-center items-center"
       >
         <div className="relative w-full max-w-xl" style={{ height: "480px" }}>
           {/* Outer ring glow */}
