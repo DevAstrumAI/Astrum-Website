@@ -163,9 +163,11 @@ export default function About() {
           <div>
             <CoreValues />
           </div>
+          {/* Talk to Our Experts — commented out
           <section className="snap-section">
           <MeetExperts />
           </section>
+          */}
           <section className="snap-section">
           <ChooseAstrumai />
           </section>
