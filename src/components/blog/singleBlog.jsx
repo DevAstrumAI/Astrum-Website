@@ -2,11 +2,27 @@ import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import BlogData from "./dataBlog";
 import ReactMarkdown from "react-markdown";
-import { Share2 } from "lucide-react";
+import {
+  Share2,
+  Scale,
+  Factory,
+  ShoppingCart,
+  MessageSquare,
+  Hospital,
+  TrendingUp,
+} from "lucide-react";
 
 const SingleBlog = () => {
   const { slug } = useParams();
   const blog = BlogData.find((b) => b.slug === slug);
+  const cardIconMap = {
+    legal: Scale,
+    manufacturing: Factory,
+    retail: ShoppingCart,
+    customerService: MessageSquare,
+    healthcare: Hospital,
+    marketing: TrendingUp,
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -121,49 +137,130 @@ const SingleBlog = () => {
                 </h2>
 
                 {/* Content with bold sub-headings & bullets support */}
-                <div
-                  style={{ fontFamily: "'Outfit', sans-serif" }}
-                  className="text-lg text-gray-400 leading-[1.8] font-light space-y-6"
-                >
-                  {section.para.split("\n").map((line, pIdx) => {
-                    const trimmed = line.trim();
-                    if (!trimmed) return null;
+                {section.para ? (
+                  <div
+                    style={{ fontFamily: "'Outfit', sans-serif" }}
+                    className="text-lg text-gray-400 leading-[1.8] font-light space-y-6"
+                  >
+                    {section.para.split("\n").map((line, pIdx) => {
+                      const trimmed = line.trim();
+                      if (!trimmed) return null;
 
-                    // Detect bold sub-heading (**text**)
-                    if (trimmed.startsWith("**") && trimmed.endsWith("**")) {
-                      const headingText = trimmed.slice(2, -2).trim();
+                      // Detect bold sub-heading (**text**)
+                      if (trimmed.startsWith("**") && trimmed.endsWith("**")) {
+                        const headingText = trimmed.slice(2, -2).trim();
+                        return (
+                          <h3
+                            key={pIdx}
+                            style={{ fontFamily: "'Outfit', sans-serif" }}
+                            className="text-lg md:text-xl font-light text-white mt-12 mb-6"
+                          >
+                            {headingText}
+                          </h3>
+                        );
+                      }
+
+                      // Detect bullet lines starting with •
+                      if (trimmed.startsWith("•") || trimmed.startsWith("*")) {
+                        const bulletText = trimmed.startsWith("•")
+                          ? trimmed.slice(1).trim()
+                          : trimmed.slice(1).trim();
+                        return (
+                          <div key={pIdx} className="flex items-start gap-3 my-2">
+                            <span className="text-gray-400 text-2xl mt-1">•</span>
+                            <p className="flex-1">{bulletText}</p>
+                          </div>
+                        );
+                      }
+
+                      // Normal paragraph
                       return (
-                        <h3
-                          key={pIdx}
-                          style={{ fontFamily: "'Outfit', sans-serif" }}
-                          className="text-lg md:text-xl font-light text-white mt-12 mb-6"
-                        >
-                          {headingText}
+                        <p key={pIdx} className="whitespace-pre-line mb-4">
+                          {trimmed}
+                        </p>
+                      );
+                    })}
+                  </div>
+                ) : null}
+
+                {section.cards?.length ? (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    {section.cards.map((card, cardIdx) => (
+                      <div
+                        key={cardIdx}
+                        className="rounded-2xl border border-purple-500/30 bg-white/5 p-6"
+                      >
+                        {card.icon ? (
+                          (() => {
+                            const IconComponent = cardIconMap[card.icon];
+                            return IconComponent ? (
+                              <IconComponent
+                                size={24}
+                                strokeWidth={1.75}
+                                className="text-gray-300 mb-4"
+                              />
+                            ) : null;
+                          })()
+                        ) : null}
+                        <h3 className="text-xl text-white font-medium mb-3">
+                          {card.title}
                         </h3>
-                      );
-                    }
-
-                    // Detect bullet lines starting with •
-                    if (trimmed.startsWith("•") || trimmed.startsWith("*")) {
-                      const bulletText = trimmed.startsWith("•")
-                        ? trimmed.slice(1).trim()
-                        : trimmed.slice(1).trim();
-                      return (
-                        <div key={pIdx} className="flex items-start gap-3 my-2">
-                          <span className="text-gray-400 text-2xl mt-1">•</span>
-                          <p className="flex-1">{bulletText}</p>
+                        <p className="text-base text-gray-300 leading-7 mb-5">
+                          {card.description}
+                        </p>
+                        <div className="inline-block px-4 py-2 rounded-full bg-purple-500/20 border border-purple-400/30 text-purple-200 text-sm font-medium">
+                          {card.metric}
                         </div>
-                      );
-                    }
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
 
-                    // Normal paragraph
-                    return (
-                      <p key={pIdx} className="whitespace-pre-line mb-4">
-                        {trimmed}
-                      </p>
-                    );
-                  })}
-                </div>
+                {section.statsCards?.length ? (
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-0 rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                    {section.statsCards.map((card, cardIdx) => (
+                      <div
+                        key={cardIdx}
+                        className="p-8 md:p-10 border-b md:border-b-0 md:border-r border-white/10 last:border-b-0 md:last:border-r-0 text-center"
+                      >
+                        <p className="text-5xl md:text-6xl font-semibold text-purple-400 mb-4">
+                          {card.value}
+                        </p>
+                        <p className="text-base md:text-lg text-gray-300 leading-8">
+                          {card.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
+
+                {section.afterCardsPara ? (
+                  <div
+                    style={{ fontFamily: "'Outfit', sans-serif" }}
+                    className="text-lg text-gray-400 leading-[1.8] font-light space-y-6"
+                  >
+                    {section.afterCardsPara.split("\n").map((line, pIdx) => {
+                      const trimmed = line.trim();
+                      if (!trimmed) return null;
+                      return (
+                        <p key={pIdx} className="whitespace-pre-line mb-4">
+                          {trimmed}
+                        </p>
+                      );
+                    })}
+                  </div>
+                ) : null}
+
+                {section.quoteCard ? (
+                  <blockquote className="rounded-2xl border-l-4 border-purple-500 bg-white/5 px-8 py-7">
+                    <p
+                      style={{ fontFamily: "'Outfit', sans-serif" }}
+                      className="text-2xl md:text-3xl italic font-medium text-white leading-[1.45]"
+                    >
+                      "{section.quoteCard}"
+                    </p>
+                  </blockquote>
+                ) : null}
               </div>
             ))}
         </div>

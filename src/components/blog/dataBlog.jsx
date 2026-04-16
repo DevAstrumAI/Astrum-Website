@@ -37,36 +37,83 @@ const BlogData = [
       {
         heading: "The Market Is Moving Fast",
         para:
-          "The agentic AI market was valued at just over $5 billion in 2024. By 2034, analysts project it will reach $199 billion, representing a 43.84% compound annual growth rate that outpaces nearly every other technology category. This is not speculative. It reflects the velocity of real enterprise adoption happening right now.\n\n" +
-          "79% of organisations have already adopted AI agents at some level.\n" +
-          "171% average ROI reported from agentic AI deployments.\n" +
-          "74% of executives achieved ROI on AI agents within the first year.\n\n" +
+          "The agentic AI market was valued at just over $5 billion in 2024. By 2034, analysts project it will reach $199 billion, representing a 43.84% compound annual growth rate that outpaces nearly every other technology category. This is not speculative. It reflects the velocity of real enterprise adoption happening right now.",
+        statsCards: [
+          {
+            value: "79%",
+            description:
+              "of organisations have already adopted AI agents at some level",
+          },
+          {
+            value: "171%",
+            description: "average ROI reported from agentic AI deployments",
+          },
+          {
+            value: "74%",
+            description:
+              "of executives achieved ROI on AI agents within the first year",
+          },
+        ],
+        afterCardsPara:
           "The adoption curve is steep. In 2023, only 9% of companies ran fully AI-led operations. By 2024, that number had nearly doubled to 16%. And by 2028, Gartner forecasts that one-third of all enterprise software will include built-in autonomous agents.",
       },
       {
         heading: "What AI Agents Actually Do: Real Industry Results",
         para:
-          "The proof is not in projections. It is in what forward-thinking companies are already reporting. Here is how AI agents are creating measurable impact across industries right now.\n\n" +
-          "• Legal: BakerHostetler deployed an AI-powered legal research agent that dramatically reduced the time attorneys spent on case research.\n" +
-          "• 60% reduction in research hours.\n" +
-          "• Manufacturing & Logistics: Amazon's AI-coordinated robotics fleet demonstrates the power of agents at scale.\n" +
-          "• 25% faster delivery speeds.\n" +
-          "• Retail: Walmart's inventory intelligence system reduced waste and improved forecasting accuracy.\n" +
-          "• 15% reduction in inventory costs.\n" +
-          "• Customer Service: AI agents in contact centres reduce overhead while improving resolution quality.\n" +
-          "• 30% operational cost reduction.\n" +
-          "• Healthcare: Hospitals are adopting AI agents for predictive analytics, diagnostics support, and workflow automation.\n" +
-          "• 68% current industry adoption.\n" +
-          "• Marketing: Human-AI collaborative teams use agents for content, SEO, and campaign execution.\n" +
-          "• 37% cost savings in operations.",
+          "The proof is not in projections. It is in what forward-thinking companies are already reporting. Here is how AI agents are creating measurable impact across industries right now.",
+        cards: [
+          {
+            icon: "legal",
+            title: "Legal",
+            description:
+              "BakerHostetler deployed an AI-powered legal research agent that dramatically reduced the time attorneys spent on case research, freeing them up for higher-value client work.",
+            metric: "60% reduction in research hours",
+          },
+          {
+            icon: "manufacturing",
+            title: "Manufacturing & Logistics",
+            description:
+              "Amazon's AI-coordinated robotics fleet across fulfilment centres demonstrates the operational power of agents working in concert at scale.",
+            metric: "25% faster delivery speeds",
+          },
+          {
+            icon: "retail",
+            title: "Retail",
+            description:
+              "Walmart's inventory intelligence system, powered by AI agents, reduced waste and improved forecasting accuracy, saving significant operational cost across its supply chain.",
+            metric: "15% reduction in inventory costs",
+          },
+          {
+            icon: "customerService",
+            title: "Customer Service",
+            description:
+              "AI agents in contact centres reduce operational overhead while maintaining and often improving customer satisfaction scores through faster, more accurate resolution.",
+            metric: "30% operational cost reduction",
+          },
+          {
+            icon: "healthcare",
+            title: "Healthcare",
+            description:
+              "90% of hospitals globally are adopting AI agents for predictive analytics, diagnostics support, and workflow automation, reducing administrative burden dramatically.",
+            metric: "68% current industry adoption",
+          },
+          {
+            icon: "marketing",
+            title: "Marketing",
+            description:
+              "Human-AI collaborative marketing teams are demonstrating remarkable efficiency gains, with agents handling content generation, SEO optimisation, and campaign management.",
+            metric: "37% cost savings in operations",
+          },
+        ],
       },
       {
         heading: "Why This Is Not Just Another Technology Trend",
         para:
           "Every few years, a new enterprise technology comes along with promises of transformation. Many deliver modestly. A handful deliver decisively. AI agents are in the latter category, and here is why the economics are fundamentally different.\n\n" +
           "Traditional automation is brittle. It follows pre-set rules, breaks when conditions change, and requires expensive reprogramming to adapt. AI agents are goal-oriented and adaptive. They can navigate ambiguity, use judgment, and improve over time.\n\n" +
-          "The compounding effect matters too. AI-enabled workflows have tripled their profit contribution over a three-year period, growing from a 2.4% operating profit improvement in 2022 to 7.7% by 2024. Companies that move early do not just get a head start. They widen the gap exponentially.\n\n" +
-          '"By 2027, AI agents will automate 15 to 50% of business processes. Businesses using them already report 55% higher operational efficiency and 35% cost reductions."',
+          "The compounding effect matters too. AI-enabled workflows have tripled their profit contribution over a three-year period, growing from a 2.4% operating profit improvement in 2022 to 7.7% by 2024. Companies that move early do not just get a head start. They widen the gap exponentially.",
+        quoteCard:
+          "By 2027, AI agents will automate 15 to 50% of business processes. Businesses using them already report 55% higher operational efficiency and 35% cost reductions.",
       },
       {
         heading: "The Competitive Gap Is Already Opening",
