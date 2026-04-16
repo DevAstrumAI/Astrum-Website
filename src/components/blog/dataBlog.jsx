@@ -13,7 +13,6 @@ const BlogData = [
     heroSubtitle:
       "AI agents are no longer a future concept. They are quietly rewriting the economics of business across every industry.",
     intro:
-      "AstrumAI · Blog Series · Part 1 of 2\n\n" +
       "Something fundamental is shifting in how work gets done. The companies pulling ahead are not necessarily hiring faster or spending more. They are deploying smarter. They are using AI agents: autonomous software systems that can plan, decide, and act on behalf of your business without constant human instruction.\n\n" +
       "But before the numbers, let us make sure we are on the same page about what an AI agent actually is, because it is a term that gets thrown around a lot and understood far too rarely.",
     image: "/AI Agent Blog Part 1 - thumbnail.png",
@@ -30,8 +29,10 @@ const BlogData = [
         para:
           "Most people have encountered AI in its simplest form, a chatbot that answers questions. That is reactive AI. An AI agent is something different entirely. It is proactive, goal-driven, and capable of orchestrating complex sequences of actions.\n\n" +
           "Think of it this way. A chatbot answers your customer's question about a refund. An AI agent detects the issue, checks the order history, initiates the refund, updates the CRM, sends a personalised follow-up email, and flags the recurring product fault to your operations team. All of that happens without a single human being involved.\n\n" +
-          "That is not automation in the traditional sense. That is intelligence applied to work.\n\n" +
-          '"AI agents can be applied to so many use cases, the number of businesses adopting them should be 100%. I can quickly point to dollars saved."\n\n' +
+          "That is not automation in the traditional sense. That is intelligence applied to work.",
+        quoteCard:
+          "AI agents can be applied to so many use cases, the number of businesses adopting them should be 100%. I can quickly point to dollars saved.",
+        quoteAttribution:
           "Fiona Tan, CTO at Wayfair, Google Cloud ROI of AI Report, 2025",
       },
       {

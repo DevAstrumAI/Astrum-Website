@@ -252,13 +252,18 @@ const SingleBlog = () => {
                 ) : null}
 
                 {section.quoteCard ? (
-                  <blockquote className="rounded-2xl border-l-4 border-purple-500 bg-white/5 px-8 py-7">
+                  <blockquote className="rounded-2xl border-l-4 border-purple-500 bg-white/5 px-6 py-5">
                     <p
                       style={{ fontFamily: "'Outfit', sans-serif" }}
-                      className="text-2xl md:text-3xl italic font-medium text-white leading-[1.45]"
+                      className="text-xl md:text-2xl italic font-medium text-white leading-[1.5]"
                     >
                       "{section.quoteCard}"
                     </p>
+                    {section.quoteAttribution ? (
+                      <p className="mt-4 text-base text-gray-400 not-italic">
+                        {section.quoteAttribution}
+                      </p>
+                    ) : null}
                   </blockquote>
                 ) : null}
               </div>
