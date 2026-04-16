@@ -60,11 +60,13 @@ const SingleBlog = () => {
 
         {/* Featured Image */}
         <div className="relative rounded-2xl overflow-hidden aspect-video bg-gray-900 border border-gray-800/50 mb-16">
-          <img
-            src={blog.image}
-            alt={blog.heroTitle}
-            className="w-full h-full object-cover"
-          />
+          {blog.image ? (
+            <img
+              src={blog.image}
+              alt={blog.heroTitle}
+              className="w-full h-full object-cover"
+            />
+          ) : null}
         </div>
 
         {/* Metadata Section */}

@@ -121,11 +121,13 @@ const Blog = () => {
                   </Link>
 
                   <div className="relative rounded-3xl overflow-hidden aspect-video bg-gray-900 border border-gray-800 mt-8 md:mt-10 lg:mt-12">
-                    <img
-                      src={post.image}
-                      alt={post.heroTitle}
-                      className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
-                    />
+                    {post.image ? (
+                      <img
+                        src={post.image}
+                        alt={post.heroTitle}
+                        className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                      />
+                    ) : null}
                   </div>
 
                   <p
