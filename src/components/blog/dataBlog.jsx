@@ -7,7 +7,7 @@ import ReactMarkdown from "react-markdown";
 const BlogData = [
   {
     slug: "AI-Agents-Roadmap-Part-2",
-    date: "April 16, 2026",
+    date: "April 23, 2026",
     heroTitle:
       "Your Roadmap to AI Agents: A Practical Guide for Business Leaders",
     heroSubtitle:
