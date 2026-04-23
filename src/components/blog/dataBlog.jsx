@@ -6,6 +6,211 @@ import ReactMarkdown from "react-markdown";
 
 const BlogData = [
   {
+    slug: "AI-Agents-Roadmap-Part-2",
+    date: "April 16, 2026",
+    heroTitle:
+      "Your Roadmap to AI Agents: A Practical Guide for Business Leaders",
+    heroSubtitle:
+      "You have seen the data. You know the opportunity is real. Now comes the harder question: where do you actually start, and how do you avoid the mistakes that derail most AI initiatives?",
+    intro:
+      "40% of AI projects fail. Not because the technology does not work, but because of inadequate foundations, wrong use case selection, and poor integration planning. That is not a technology problem. That is a strategy problem.\n\n" +
+      "In our first blog, we covered what AI agents are and the transformative results companies across industries are seeing. Now let us talk about how your business can get there, practically, systematically, and without the expensive detours.",
+    image: "/Blog LinkedIn Banners.png",
+    category: "AI STRATEGY & IMPLEMENTATION",
+    author: "AstrumAI",
+    fullDescription: [
+      {
+        heading: "",
+        quoteCard:
+          "The companies winning with AI agents are not the ones who moved fastest. They are the ones who moved deliberately.",
+      },
+      {
+        heading: "1. Audit Your Workflows Before You Touch Any Technology",
+        para:
+          "The most common mistake businesses make is jumping straight to the solution. They hear about AI agents, they get excited, and they start evaluating tools before they have clearly identified where the real problems are.\n\n" +
+          "Start with a workflow audit. The goal is to map where your team's time is actually going, and to identify which tasks meet the criteria for agent deployment.",
+        frameworkTable: {
+          title: "Workflow Audit Framework",
+          rows: [
+            {
+              label: "Repetitive?",
+              description:
+                "Does this task follow a consistent pattern? If a human can describe the steps to a new colleague in under 10 minutes, a well-designed agent can likely execute it.",
+            },
+            {
+              label: "Data-driven?",
+              description:
+                "Does this task rely on reading, processing, or responding to information from your systems such as CRM, ERP, email, or databases? Agents thrive on data-rich environments.",
+            },
+            {
+              label: "Time-sensitive?",
+              description:
+                "Are there tasks where speed and availability matter but do not always get them, like after-hours customer queries or real-time reporting? Agents work 24/7 at zero marginal cost.",
+            },
+            {
+              label: "High-volume?",
+              description:
+                "Is this something your team does dozens or hundreds of times per week? Even a modest efficiency gain on high-volume tasks compounds quickly into significant cost savings.",
+            },
+            {
+              label: "Multi-system?",
+              description:
+                "Does completing this task require jumping between several platforms, copying data from one system to another, reformatting it, then sending it somewhere else? This is where agents excel.",
+            },
+          ],
+        },
+        afterCardsPara:
+          "Tasks that score positively across most of these dimensions are your highest-value targets. Prioritise ruthlessly. The ROI from a well-deployed agent on the right task is orders of magnitude greater than a poorly deployed agent on the wrong one.",
+      },
+      {
+        heading: "2. Identify Your Quick Win Entry Points",
+        para:
+          "Not all use cases are created equal. Some are easier to implement, deliver results faster, and build internal confidence for broader rollout. These are your quick wins, and finding them is a science, not a guess.\n\n" +
+          "Here is how to think about where to start based on your function:",
+        useCaseTable: {
+          rows: [
+            {
+              useCase: "Customer support ticket triage and response drafting",
+              fit: "High fit",
+              fitTone: "high",
+              timeToValue: "Weeks",
+              timeTone: "fast",
+            },
+            {
+              useCase: "Lead qualification and CRM data entry",
+              fit: "High fit",
+              fitTone: "high",
+              timeToValue: "Weeks",
+              timeTone: "fast",
+            },
+            {
+              useCase: "Invoice processing and AP workflows",
+              fit: "High fit",
+              fitTone: "high",
+              timeToValue: "1 to 2 months",
+              timeTone: "medium",
+            },
+            {
+              useCase: "Internal HR queries and onboarding workflows",
+              fit: "High fit",
+              fitTone: "high",
+              timeToValue: "1 to 2 months",
+              timeTone: "medium",
+            },
+            {
+              useCase: "Report generation and data summarisation",
+              fit: "High fit",
+              fitTone: "high",
+              timeToValue: "Weeks",
+              timeTone: "fast",
+            },
+            {
+              useCase: "Complex regulatory compliance decisions",
+              fit: "Medium fit",
+              fitTone: "medium",
+              timeToValue: "Months",
+              timeTone: "medium",
+            },
+            {
+              useCase: "Strategic planning and C-suite judgement calls",
+              fit: "Low fit",
+              fitTone: "low",
+              timeToValue: "Not suitable",
+              timeTone: "slow",
+            },
+          ],
+        },
+        tipCard: {
+          label: "Key Insight",
+          text: "A common mistake is trying to start with the most complex, high-stakes use case. Start with a contained, measurable task. Prove the value. Build confidence. Then scale. AI agents that earn trust internally get expanded. Those deployed poorly get abandoned.",
+        },
+      },
+      {
+        heading: "3. Design for Integration, Not Isolation",
+        para:
+          "An AI agent that cannot talk to your existing systems is an island. The power of agentic AI comes from its ability to operate across your tech stack, pulling data from your CRM, updating records in your ERP, sending communications through your email platform, and logging actions in your project management tools.\n\n" +
+          "This is why 87% of IT executives rate system interoperability as a critical requirement for AI agent adoption. The design phase must answer these questions before a single line of code is written:",
+        checklist: [
+          "Which existing systems does this agent need to read from and write to?",
+          "What data does the agent need access to and how is that data currently structured?",
+          "What are the security and compliance requirements around that data?",
+          "Where will human oversight be required, and how will handoffs to human staff be handled?",
+          "How will the agent's performance be measured and what are the KPIs?",
+          "What does a rollback or override look like if the agent makes an error?",
+        ],
+        afterCardsPara:
+          "Answering these questions upfront prevents the most expensive failure mode in AI agent projects: building something that works in isolation but cannot connect to the rest of your business.",
+      },
+      {
+        heading: "4. Implement With a Human in the Loop Mindset",
+        para:
+          "The most successful AI agent deployments do not eliminate humans. They redeploy them to higher-value work. The framing matters enormously for internal buy-in.\n\n" +
+          "Positioning agents as replacements creates fear and resistance. Positioning them as tools that handle the low-value work so your team can focus on what they do best creates enthusiasm and adoption. The data backs this up: 89% of businesses emphasise human-AI collaboration over replacement.",
+        tipCard: {
+          label: "Implementation Tip",
+          text: "Run your first AI agent deployment with a shadowing phase, where the agent makes recommendations but a human reviews and approves. Once trust is established with real data, extend autonomous authority incrementally. Earned autonomy compounds.",
+        },
+        afterCardsPara:
+          "Define your governance model early. Who reviews the agent's decisions? Who can override it? What triggers a human escalation? These are not bureaucratic questions. They are the mechanisms that keep your deployment safe and earn the confidence of regulators, customers, and staff alike.",
+      },
+      {
+        heading: "5. Measure, Iterate, and Scale Deliberately",
+        para:
+          "Set your success metrics before you go live. Not after. If you do not define what working looks like in advance, you will not be able to distinguish between an agent that needs refinement and one that is genuinely failing.\n\n" +
+          "Good metrics for your first AI agent deployment typically include: time saved per task, error rate before and after, cost per interaction, employee satisfaction with the workflow, and customer satisfaction where applicable.\n\n" +
+          "Once you have a working, measured deployment, scaling is the exciting part. The 66% of companies that report measurable value from their first agent typically expand to multiple use cases within six months. The infrastructure you build for your first agent, the integrations, the governance model, the oversight processes, becomes the foundation for everything that follows.",
+      },
+      {
+        heading: "",
+        helpPanel: {
+          eyebrow: "How AstrumAI Can Help",
+          title: "You do not have to figure this out alone.",
+          paragraphs: [
+            "AstrumAI is a specialist AI development team that builds custom AI agents and integrates them directly into your existing business systems. We handle everything from workflow auditing and agent design through to deployment, integration, and ongoing optimisation.",
+            "Whether you are exploring your first use case or scaling an enterprise-wide agentic strategy, we bring the technical depth and business understanding to make it work, without the disruption, wasted spend, or half-measures.",
+          ],
+          features: [
+            {
+              icon: "workflowDiscovery",
+              title: "Workflow Discovery",
+              description:
+                "We audit your processes and identify your highest-ROI agent opportunities.",
+            },
+            {
+              icon: "customAgentDevelopment",
+              title: "Custom Agent Development",
+              description:
+                "Bespoke AI agents built for your specific workflows and data environment.",
+            },
+            {
+              icon: "systemIntegration",
+              title: "System Integration",
+              description:
+                "Seamless connection to your CRM, ERP, communication tools, and more.",
+            },
+            {
+              icon: "scaleOptimise",
+              title: "Scale and Optimise",
+              description:
+                "Ongoing performance monitoring and expansion to new use cases over time.",
+            },
+          ],
+          cta: {
+            label: "Book a Discovery Call with AstrumAI",
+            url: "https://www.astrumai.tech/contact",
+          },
+        },
+      },
+      {
+        heading: "The Bottom Line",
+        para:
+          "AI agents are not a plug-and-play solution. They require strategic thinking, careful design, and the right integration expertise. But the companies getting it right are seeing transformational results, not incremental ones.\n\n" +
+          "The 40% failure rate in AI projects is not a verdict on the technology. It is a verdict on implementation without strategy. With the right approach and the right partner, your business can be firmly in the 60% that succeed.\n\n" +
+          "The window for competitive advantage is open. The question is whether your business walks through it.",
+      },
+    ],
+  },
+  {
     slug: "The-Age-of-AI-Agents-Part-1",
     date: "April 16, 2026",
     heroTitle:

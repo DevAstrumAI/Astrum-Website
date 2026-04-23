@@ -4,6 +4,11 @@ import BlogData from "./dataBlog";
 import ReactMarkdown from "react-markdown";
 import {
   Share2,
+  Check,
+  Search,
+  Hammer,
+  Link2 as Link2Icon,
+  BarChart3,
   Scale,
   Factory,
   ShoppingCart,
@@ -22,6 +27,10 @@ const SingleBlog = () => {
     customerService: MessageSquare,
     healthcare: Hospital,
     marketing: TrendingUp,
+    workflowDiscovery: Search,
+    customAgentDevelopment: Hammer,
+    systemIntegration: Link2Icon,
+    scaleOptimise: BarChart3,
   };
 
   useEffect(() => {
@@ -129,12 +138,14 @@ const SingleBlog = () => {
             blog.fullDescription.map((section, idx) => (
               <div key={idx} className="space-y-10 md:space-y-12">
                 {/* Main section heading */}
-                <h2
-                  style={{ fontFamily: "'Outfit', sans-serif" }}
-                  className="text-2xl md:text-3xl font-light text-white tracking-tight"
-                >
-                  {section.heading}
-                </h2>
+                {section.heading ? (
+                  <h2
+                    style={{ fontFamily: "'Outfit', sans-serif" }}
+                    className="text-2xl md:text-3xl font-light text-white tracking-tight"
+                  >
+                    {section.heading}
+                  </h2>
+                ) : null}
 
                 {/* Content with bold sub-headings & bullets support */}
                 {section.para ? (
@@ -265,6 +276,163 @@ const SingleBlog = () => {
                       </p>
                     ) : null}
                   </blockquote>
+                ) : null}
+
+                {section.frameworkTable ? (
+                  <div className="rounded-2xl overflow-hidden border border-purple-300/40 bg-[#f2eefc]">
+                    <div className="bg-gradient-to-r from-blue-700 to-fuchsia-500 px-6 py-4">
+                      <p className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-white">
+                        {section.frameworkTable.title}
+                      </p>
+                    </div>
+                    {section.frameworkTable.rows.map((row, rowIdx) => (
+                      <div
+                        key={rowIdx}
+                        className="grid grid-cols-1 md:grid-cols-12 border-t border-purple-200/80"
+                      >
+                        <div className="md:col-span-3 px-6 py-6 bg-[#ece7f8]">
+                          <p className="text-lg md:text-xl text-purple-700 font-semibold leading-tight">
+                            {row.label}
+                          </p>
+                        </div>
+                        <div className="md:col-span-9 px-6 py-6">
+                          <p className="text-gray-800 text-sm md:text-base leading-[1.7]">
+                            {row.description}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
+
+                {section.useCaseTable ? (
+                  <div className="rounded-2xl overflow-hidden border border-purple-200/60 bg-[#f2eefc]">
+                    <div className="grid grid-cols-12 border-b border-purple-200/80 px-6 py-5 text-purple-700 uppercase tracking-[0.15em] text-sm font-bold">
+                      <p className="col-span-6 md:col-span-5">Use Case</p>
+                      <p className="col-span-3 md:col-span-3">Agent-Ready?</p>
+                      <p className="col-span-3 md:col-span-4">Time to Value</p>
+                    </div>
+                    {section.useCaseTable.rows.map((row, rowIdx) => (
+                      <div
+                        key={rowIdx}
+                        className="grid grid-cols-12 items-center gap-3 border-b border-purple-200/80 last:border-b-0 px-6 py-5"
+                      >
+                        <p className="col-span-6 md:col-span-5 text-gray-800 text-lg leading-[1.5]">
+                          {row.useCase}
+                        </p>
+                        <div className="col-span-3 md:col-span-3">
+                          <span
+                            className={`inline-block px-4 py-2 rounded-full text-sm font-semibold ${
+                              row.fitTone === "high"
+                                ? "bg-purple-100 text-purple-700"
+                                : row.fitTone === "medium"
+                                  ? "bg-amber-100 text-amber-700"
+                                  : "bg-gray-200 text-gray-600"
+                            }`}
+                          >
+                            {row.fit}
+                          </span>
+                        </div>
+                        <div className="col-span-3 md:col-span-4">
+                          <span
+                            className={`inline-block px-4 py-2 rounded-full text-sm font-semibold ${
+                              row.timeTone === "fast"
+                                ? "bg-purple-100 text-purple-700"
+                                : row.timeTone === "medium"
+                                  ? "bg-amber-100 text-amber-700"
+                                  : "bg-gray-200 text-gray-600"
+                            }`}
+                          >
+                            {row.timeToValue}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
+
+                {section.checklist?.length ? (
+                  <div className="space-y-0 border-t border-b border-white/10">
+                    {section.checklist.map((item, itemIdx) => (
+                      <div
+                        key={itemIdx}
+                        className="flex items-start gap-4 py-6 border-b border-white/10 last:border-b-0"
+                      >
+                        <div className="w-9 h-9 rounded-full bg-gradient-to-r from-blue-600 to-fuchsia-500 flex items-center justify-center flex-shrink-0 mt-1">
+                          <Check size={18} className="text-white" strokeWidth={3} />
+                        </div>
+                        <p className="text-lg text-gray-200 leading-[1.55]">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
+
+                {section.tipCard ? (
+                  <div className="rounded-2xl border-l-4 border-purple-500 bg-[#f2eefc] px-6 py-6">
+                    <p className="text-purple-700 uppercase tracking-[0.2em] text-sm font-bold mb-4">
+                      {section.tipCard.label}
+                    </p>
+                    <p className="text-gray-800 text-lg leading-[1.7]">
+                      {section.tipCard.text}
+                    </p>
+                  </div>
+                ) : null}
+
+                {section.helpPanel ? (
+                  <div className="rounded-3xl overflow-hidden bg-[#090a16] border border-purple-400/30 p-8 md:p-10">
+                    <p className="text-blue-400 uppercase tracking-[0.2em] text-sm font-semibold mb-7">
+                      {section.helpPanel.eyebrow}
+                    </p>
+                    <h3
+                      style={{ fontFamily: "'Outfit', sans-serif" }}
+                      className="text-2xl md:text-3xl text-white font-medium mb-8 leading-tight"
+                    >
+                      {section.helpPanel.title}
+                    </h3>
+                    {section.helpPanel.paragraphs?.map((text, textIdx) => (
+                      <p
+                        key={textIdx}
+                        className="text-gray-300 text-base md:text-lg leading-[1.65] mb-6 last:mb-10"
+                      >
+                        {text}
+                      </p>
+                    ))}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+                      {section.helpPanel.features?.map((feature, featureIdx) => {
+                        const FeatureIcon = cardIconMap[feature.icon];
+                        return (
+                          <div
+                            key={featureIdx}
+                            className="rounded-2xl bg-[#18142d] border border-purple-400/20 p-6"
+                          >
+                            {FeatureIcon ? (
+                              <FeatureIcon
+                                size={22}
+                                strokeWidth={2}
+                                className="text-purple-300 mb-4"
+                              />
+                            ) : null}
+                            <h4 className="text-white text-lg md:text-xl font-semibold mb-3">
+                              {feature.title}
+                            </h4>
+                            <p className="text-gray-300 text-sm md:text-base leading-[1.55]">
+                              {feature.description}
+                            </p>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    {section.helpPanel.cta ? (
+                      <a
+                        href={section.helpPanel.cta.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center rounded-full px-8 py-4 text-base md:text-lg font-semibold text-white bg-gradient-to-r from-blue-700 to-fuchsia-500 hover:opacity-95 transition-opacity"
+                      >
+                        {section.helpPanel.cta.label}
+                      </a>
+                    ) : null}
+                  </div>
                 ) : null}
               </div>
             ))}
